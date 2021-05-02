@@ -52,8 +52,9 @@ class _MainPageState extends State<MainPage> {
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15)),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.white24,
-                          offset: Offset(0, -2)
+                          color: Color(0xffF1F1F1),
+                          offset: Offset(0, -2),
+                          blurRadius: 5
                         )
                       ]
                     ),
@@ -74,7 +75,7 @@ class _MainPageState extends State<MainPage> {
                                     padding: const EdgeInsets.only(bottom: 5),
                                     child: Image.asset('assets/images/ic_home${model.currentName == PageName.home ? '_${selectU.toString()}': ''}.png', height: 20, width: 20,),
                                   ),
-                                  Text('Home', style: kTextStyle(size: 8, color: model.currentName == PageName.home ? Colors.blue : textGrey))
+                                  Text('Home', style: kTextStyle(size: 8, color: model.currentName == PageName.home ? mainColors[selectU] : textGrey))
                                 ],
                               ),
                             ),
@@ -124,7 +125,7 @@ class _MainPageState extends State<MainPage> {
                                     padding: const EdgeInsets.only(bottom: 5),
                                     child: Image.asset('assets/images/ic_setting${model.currentName == PageName.settings ? '_${selectU.toString()}': ''}.png', height: 20, width: 20,),
                                   ),
-                                  Text('Settings', style: kTextStyle(size: 8, color: model.currentName == PageName.settings ? Colors.blue : textGrey))
+                                  Text('Settings', style: kTextStyle(size: 8, color: model.currentName == PageName.settings ? mainColors[selectU] : textGrey))
                                 ],
                               ),
                             ),
