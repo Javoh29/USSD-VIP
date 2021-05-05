@@ -1,9 +1,10 @@
-import 'dart:async';
+import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_indicator/page_view_indicator.dart';
+import 'package:ussd_vip/data/model/ussd_model.dart';
 import 'package:ussd_vip/data/providers/navigation_provider.dart';
 import 'package:ussd_vip/utils/constants.dart';
 import 'package:provider/provider.dart';
@@ -28,29 +29,29 @@ class _HomePageState extends State<HomePage> {
     'assets/images/logo_beeline',
   ];
   final pageIndexNotifier = ValueNotifier<int>(0);
-  PageController _pageController =
-      PageController(viewportFraction: 1, keepPage: true);
   CarouselController _carouselController = CarouselController();
-  Timer _timer;
   int _realIdx = selectU;
 
   @override
   void initState() {
     super.initState();
-    _timer = Timer.periodic(Duration(seconds: 5), (timer) {
-      int p = pageIndexNotifier.value + 1;
-      if (p > _imgList.length - 1) {
-        p = 0;
-      }
-      _pageController.jumpToPage(p);
-    });
+    loadData();
+  }
+
+  Future<void> loadData() async {
+    String data = await DefaultAssetBundle.of(context).loadString("assets/data/mobiuz.json");
+    var j = jsonDecode(data);
+    UssdModel model = UssdModel.fromJson(j['ussd']['sections'][0]);
+    print(model.items[0].title.toJson());
+    // Directory directory = await getApplicationDocumentsDirectory();
+    // var f = File("${directory.path}/assets/data/mobi.json");
+    // String text = await f.readAsString();
+    // print("JSON: $text");
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
     pageIndexNotifier.dispose();
-    _timer.cancel();
     super.dispose();
   }
 

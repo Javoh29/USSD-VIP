@@ -1,0 +1,1043 @@
+{
+  "ussd": {
+    "sections": [
+      {
+        "title": {
+          "ru": "USSD Коды",
+          "uz": "USSD Kodlar"
+        },
+        "display": true,
+        "items": [
+          {
+            "title": {
+              "ru": "Проверить баланс",
+              "uz": "Xisobni tekshirish"
+            },
+            "desc": {
+              "ru": "Для проверки своего баланса.",
+              "uz": "Xisobingizdagi qoldiqni ko'rish uchun ushbu kodni iyuborishingiz mumkin."
+            },
+            "code": "*102#"
+          },
+          {
+            "title": {
+              "ru": "Остаток MB (соц. сети)",
+              "uz": "MB qoldig'i (ijt. tarm.)"
+            },
+            "desc": {
+              "ru": "Проверка трафика для социальных сетей.",
+              "uz": "Ijtimoiy tarmoqlar uchun berilgan trafik qoldig'ini ko'rish uchun."
+            },
+            "code": "*101#"
+          },
+          {
+            "title": {
+              "ru": "Остаток MB",
+              "uz": "MB qoldig'i"
+            },
+            "desc": {
+              "ru": "Проверка купленного либо бонусного трафика.",
+              "uz": "Sotib olingan internet trafik paketlari, hamda bonus trafik qoldiqlarini ko'rish."
+            },
+            "code": "*103#"
+          },
+          {
+            "title": {
+              "ru": "Остаток MB (Tas-ix)",
+              "uz": "MB qoldig'i (Tas-ix)"
+            },
+            "desc": {
+              "ru": "Проверка купленного либо бонусного трафика Tas-ix.",
+              "uz": "Tas-ix tarmog'i ichida ishlatish uchun sotib olingan internet trafik paketlari, hamda bonus trafik qoldiqlarini ko'rish."
+            },
+            "code": "*109#"
+          },
+          {
+            "title": {
+              "ru": "Экспресс оплата",
+              "uz": "Ekspress-to'lov"
+            },
+            "desc": {
+              "ru": "<p>Пополнение баланса используя карты Экспресс-оплаты.</p><p>Для пополнение: *104*номер-карты#.</p>",
+              "uz": "<p>Ekspress-to'lov kartalari orqali xisobingizni to'ldirish.</p><p>To'ldirish uchun: *104*karta-raqami#.</p>"
+            },
+            "codeDisplay": "*104#"
+          },
+          {
+            "title": {
+              "ru": "Остаток SMS",
+              "uz": "SMSlar qoldig'i"
+            },
+            "desc": {
+              "ru": "Проверка количество купленных либо бонусных SMS.",
+              "uz": "Xisobingizda qolgan bepul SMSlar haqida ma'lumot."
+            },
+            "code": "*105#"
+          },
+          {
+            "title": {
+              "ru": "Остаток минут",
+              "uz": "Daqiqalar qoldig'i"
+            },
+            "desc": {
+              "ru": "Проверка остатка минут на вашем счету.",
+              "uz": "Xisobingizda qolgan bepul daqiqalar haqida ma'lumot."
+            },
+            "code": "*106#"
+          },
+          {
+            "title": {
+              "ru": "Определить номер",
+              "uz": "Raqamni aniqlash"
+            },
+            "desc": {
+              "ru": "Определить номер данной SIM карты.",
+              "uz": "SIM kartangizning telefon raqamini aniqlash uchun ushbu kodni yuboring."
+            },
+            "code": "*148#"
+          },
+          {
+            "title": {
+              "ru": "Курс Долларакурси",
+              "uz": "Dollar kursi"
+            },
+            "desc": {
+              "ru": "",
+              "uz": ""
+            },
+            "code": "*110*00#"
+          },
+          {
+            "title": {
+              "ru": "Мой тариф",
+              "uz": "Tarif rejam"
+            },
+            "desc": {
+              "ru": "Определить свой тариф. Ответ высылается СМСкой.",
+              "uz": "Xozirda qaysi tarif rejada bo'lganingizni tekshirish uchun ushbu kodni yuboring. Javobi SMS tariqasida keladi."
+            },
+            "code": "*110*05#"
+          },
+          {
+            "title": {
+              "ru": "Дополнительные услуги",
+              "uz": "Qo'shimcha xizmatlar"
+            },
+            "desc": {
+              "ru": "Получить список подключенных платных услуг.",
+              "uz": "Yoqilgan qo'shimcha xizmatlar ro'yhaatini ko'rish. Javobi SMS tariqasida yuboriladi."
+            },
+            "code": "*110*09#"
+          },
+          {
+            "title": {
+              "ru": "Мои номера",
+              "uz": "Mening raqamlarim"
+            },
+            "desc": {
+              "ru": "Получить список всех номеров зарегистрированных на ваш паспорт.",
+              "uz": "Pasportingizga ro'yxatdan o'tgan hamma telefon raqamlarni ro'yxatini olish. Javobi SMS tariqasida keladi."
+            },
+            "code": "*303#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Услуги",
+          "uz": "Xizmatlar"
+        },
+        "plain": true,
+        "items": [
+          {
+            "title": {
+              "ru": "Do It!",
+              "uz": "Do It!"
+            },
+            "desc": {
+              "ru": "<p>Безграничный интернет ночью с 01:00 до 09:00.</p><p>Цена подключения: 0 сум.</p><p>Абонентская плата в день: 12,630 сум.</p><p>Отключить услугу: *110*0*0#.</p>",
+              "uz": "<p>01:00 dan 09:00 gacha cheksiz internet.</p><p>Ulanish narxi: 0 so'm.</p><p>Kunlik abonent to'lovi: 12,630 so'm.</p>"
+            },
+            "code": "*100500#",
+            "codeOff": "*110*0*0#"
+          },
+          {
+            "title": {
+              "ru": "Будь в курсе",
+              "uz": "Xabardor bo'l"
+            },
+            "desc": {
+              "ru": "<p>Даже если телефон разрядится в самый неподходящий момент, вы не пропустите ни одного звонка. На телефон поступит SMS с номером звонившего, и вы будете знать, кому перезвонить.</p><p>Цена подключения: 0 сум.</p><p>Абонентская плата в день: 240 сум.</p><p>Отключить услугу: *110*050#.</p>",
+              "uz": "<p>Telefongiz o'chib qolsa, sizga telefon qilgan raqamlar SMS tariqasida keladi.</p><p>Ulanish narxi: 0 so'm.</p><p>Kunlik abonent to'lovi: 240 so'm.</p>"
+            },
+            "code": "*110*051#",
+            "codeOff": "*110*050#"
+          },
+          {
+            "title": {
+              "ru": "Есть контакт",
+              "uz": "Bog'lanish mumkin"
+            },
+            "desc": {
+              "ru": "<p>Звонившие вам абоненты всегда будут оповещены о том, что ваш телефон появился в сети и вы снова доступны для связи.</p><p>Цена подключения: 0 сум.</p><p>Абонентская плата в день: 240 сум.</p><p>Отключить услугу: *110*052#.</p>",
+              "uz": "<p>Telefoningiz o'chib qolsa, sizga telefon qilgan raqamlarga, telefoningiz yoqilgani haqida SMS tariqasida ma'lumot beriladi.</p><p>Ulanish narxi: 0 сўм.</p><p>Kunlik abonent to'lovi: 240 сўм.</p>"
+            },
+            "code": "*110*051#",
+            "codeOff": "*110*052#"
+          },
+          {
+            "title": {
+              "ru": "Антиопределитель номера",
+              "uz": "Antianiqlagich"
+            },
+            "desc": {
+              "ru": "<p>При звонке Антиопределитель сохранит ваш номер телефона в секрете, даже если у собеседника установлен Определитель номера.</p><p>Цена подключения: 421 сум.</p><p>Абонентская плата в день: 421 сум.</p><p>Отключить услугу: *110*070#.</p>",
+              "uz": "<p>Telefon raqamingizni yashirish.</p><p>Ulanish narxi: 421 so'm.</p><p>Kunlik abonent to'lovi: 421 so'm.</p>"
+            },
+            "code": "*110*071#",
+            "codeOff": "*110*070#"
+          },
+          {
+            "title": {
+              "ru": "Определитель номера",
+              "uz": "Raqamni Aniqlagich"
+            },
+            "desc": {
+              "ru": "<p>С Определителем номера вы всегда знаете, кто звонит!</p><p>Цена подключения: 0 сум.</p><p>Абонентская плата в день: 0 сум.</p><p>Отключить услугу: *110*060#.</p>",
+              "uz": "<p>Yashiringan telefon raqaminidan kelayotgan qo'ng'iroqlarni ko'rish.</p><p>Ulanish narxi: 0 сўм.</p><p>Kunlik abonent to'lovi: 0 so'm.</p>"
+            },
+            "code": "*110*062#",
+            "codeOff": "*110*060#"
+          },
+          {
+            "title": {
+              "ru": "Скрытый звонок",
+              "uz": "Sirli qo'ng'iroq"
+            },
+            "desc": {
+              "ru": "<p>Теперь вы можете звонить, скрывая свой номер, при определенном звонке на ваш выбор! Услуга не требует специального подключения и без абонентской платы.</p><p>Вам лишь необходимо набрать <b>#</b> перед номером вызываемого абонента и ваш номер будет скрыт! Номер необходимо набирать в международном формате.</p><p>Цена: 252,60 сум.</p>",
+              "uz": "<p>O'z raqamingizni yashirib qo'ng'iroq qiling. Chaqirilayotgan abonent raqami oldiga <b>#</b> belgisini qo'shing.</p><p>Misol: #99893ХХХХХХХ.</p><p>Xizmat narxi: 252,60 so'm.</p>"
+            },
+            "code": "*110*062#"
+          },
+          {
+            "title": {
+              "ru": "Своя мелодия",
+              "uz": "Mening musiqam"
+            },
+            "desc": {
+              "ru": "<p>Это предоставление возможности абоненту устанавливать вместо обычных вызывных гудков для входящих звонков различные мелодии и звуки.</p><p>Цена подключения: 842 сум.</p><p>Абонентская плата в день: 210,50 сум.</p><p>Отключить услугу: *110*310#.</p>",
+              "uz": "<p>Sizga telefon qilishganida, odatiy chaqiruv ovozini o'rniga xar xil ohanglar o'rnatiladi.</p><p>Ulanish narxi: 842 so'm.</p><p>Kunlik abonent to'lovi: 210,50 so'm.</p>"
+            },
+            "code": "*110*311#",
+            "codeOff": "*110*310#"
+          },
+          {
+            "title": {
+              "ru": "Блокировка номера",
+              "uz": "Raqamni blokirovka qilish"
+            },
+            "desc": {
+              "ru": "<p>Услуга даёт возможность заблокировать номер по желанию абонента.</p><p>Цена: 421 сум.</p><p>Заблокировать телефонный номер можно, позвонив по телефону 0611 или (+998 90) 185-00-55.</p>",
+              "uz": "<p>Narxi: 421 so'm.</p><p>Raqamingizni blokirovkaga qo'shish va yechish uchun 0611 qisqa raqamiga telefon qiling.</p>"
+            },
+            "codeDisplay": "0611"
+          },
+          {
+            "title": {
+              "ru": "Переадресация",
+              "uz": "Boshqa raqamga yo'naltirish"
+            },
+            "desc": {
+              "ru": "<p>Удобная услуга, например, когда вы ждете важный звонок, а у телефона сел аккумулятор.</p><p>Пользование: **21*<код оператора>номер абонента*11#вызов</p><p>Например: **21*931821234*11#</p><p>Цена подключения: 0 сум.</p><p>Цена: 421 сум/мин.</p><p>Отключить услугу: ##21#.</p>",
+              "uz": "<p>Foydalanish: **21*RAQAM*11#</p><p>Masalan: **21*931821234*11#</p><p>Ulanish narxi: 0 сўм.</p><p>Daqiqasi: 421 so'm.</p>"
+            },
+            "codeDisplay": " ",
+            "codeOff": "##21#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Платные СМС",
+          "uz": "Pullik SMS'lar"
+        },
+        "plain": true,
+        "items": [
+          {
+            "title": {
+              "ru": "Погода",
+              "uz": "Ob-xavo"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 421 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP OB\" на короткий номер 5454.</p>",
+              "uz": "<p>SMS narxi: 421 so'm.</p><p>O'chirish uchun, \"STOP OB\" so'zini 5454 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5454 5757"
+          },
+          {
+            "title": {
+              "ru": "Курс валют",
+              "uz": "Valyutalar kursi"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 421 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP KURS\" на короткий номер 5454.</p>",
+              "uz": "<p>SMS narxi: 421 so'm.</p><p>O'chirish uchun, \"STOP KURS\" so'zini 5454 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5454 5757"
+          },
+          {
+            "title": {
+              "ru": "Стихи",
+              "uz": "She'rlar"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 421 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP SH\" на короткий номер 5454.</p>",
+              "uz": "<p>SMS narxi: 421 so'm.</p><p>O'chirish uchun, \"STOP SH\" so'zini 5454 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5454 5757"
+          },
+          {
+            "title": {
+              "ru": "Стихи о любви",
+              "uz": "Sevgi SMSlari"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 421 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP SE\" на короткий номер 5454.</p>",
+              "uz": "<p>SMS narxi: 421 so'm.</p><p>O'chirish uchun, \"STOP SE\" so'zini 5454 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5454 5757"
+          },
+          {
+            "title": {
+              "ru": "Любовные стихи",
+              "uz": "Sevgi SMSlari"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 336,80 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP L\" на короткий номер 155.</p>",
+              "uz": "<p>SMS narxi: 336,80 so'm.</p><p>O'chirish uchun, \"STOP L\" so'zini 155 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "155"
+          },
+          {
+            "title": {
+              "ru": "Новости футбола",
+              "uz": "Futbol yangiliklari"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 336,80 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP SP\" на короткий номер 777.</p>",
+              "uz": "<p>SMS narxi: 336,80 so'm.</p><p>O'chirish uchun, \"STOP SP\" so'zini 777 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "777"
+          },
+          {
+            "title": {
+              "ru": "Супер анекдоты",
+              "uz": "Super anekdotlar"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 336,80 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP L\" на короткий номер 1425.</p>",
+              "uz": "<p>SMS narxi: 336,80 so'm.</p><p>O'chirish uchun, \"STOP L\" so'zini 1425 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "1425"
+          },
+          {
+            "title": {
+              "ru": "Все СМС от 1478",
+              "uz": "1478 raqamidan"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 1263 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP\" сўна короткий номер 1478.</p>",
+              "uz": "<p>SMS narxi: 1263 so'm.</p><p>O'chirish uchun, \"STOP\" so'zini 1478 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "1478"
+          },
+          {
+            "title": {
+              "ru": "Интересные факты",
+              "uz": "Qiziqarli faktlar"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 168,40 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP DN\" на короткий номер 4252.</p>",
+              "uz": "<p>SMS narxi: 336,80 so'm.</p><p>O'chirish uchun, \"STOP DN\" so'zini 4252 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "4252"
+          },
+          {
+            "title": {
+              "ru": "Советы о красоте",
+              "uz": "Go'zallik maslahatlari"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 168,40 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP GL\" на короткий номер 4252.</p>",
+              "uz": "<p>SMS narxi: 168,40 so'm.</p><p>O'chirish uchun, \"STOP GL\" so'zini 4252 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "4252"
+          },
+          {
+            "title": {
+              "ru": "Советы о здоровье",
+              "uz": "Sog'lik maslahatlari"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 505,20 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP SL\" на короткий номер 5744.</p>",
+              "uz": "<p>SMS narxi: 505,20 so'm.</p><p>O'chirish uchun, \"STOP SL\" so'zini 5744 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5744"
+          },
+          {
+            "title": {
+              "ru": "Стихи о жизни",
+              "uz": "Hayot haqida she'rlar"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 505,20 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP ZM\" на короткий номер 5744.</p>",
+              "uz": "<p>SMS narxi: 505,20 so'm.</p><p>O'chirish uchun, \"STOP ZM\" so'zini 5744 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "5744"
+          },
+          {
+            "title": {
+              "ru": "Психология",
+              "uz": "Psixologiya"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 168,40 сум.</p><p>Чтобы отписаться, отправьте текст \"STOP PL\" на короткий номер 3141.</p>",
+              "uz": "<p>SMS narxi: 168,40 so'm.</p><p>O'chirish uchun, \"STOP PL\" so'zini 3141 raqamiga yuboring.</p>"
+            },
+            "codeDisplay": "3140 3141"
+          },
+          {
+            "title": {
+              "ru": "Радио \"Дийдор\"",
+              "uz": "Diydor radiosi"
+            },
+            "desc": {
+              "ru": "<p>Цена SMS: 1684 сум.</p><p>Отправьте \"GAP \" и текст своего поздравления на короткий номер 8464. Ваше сообщерние будет прочитанно на радио \"Дийдор\".</p>",
+              "uz": "<p>SMS narxi: 1684 so'm.</p><p>8464 raqamiga \"GAP \" so'ngra o'z tabrik va istaklaringizni yozib yuboring. Tabrik va istaklaringiz \"Diydor\" radiosida o'qib eshitiriladi.</p>"
+            },
+            "codeDisplay": "8464"
+          }
+        ]
+      }
+    ]
+  },
+  "internet": {
+    "sections": [
+      {
+        "title": {
+          "ru": "День",
+          "uz": "Kun"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "4G Kun",
+              "uz": "4G Kun"
+            },
+            "desc": {
+              "ru": "5000 MB/день в <b>только</b> для сети 4G.",
+              "uz": "Faqatgina 4G tarmog'i uchun kuniga 5000 MB internet."
+            },
+            "price": 10000,
+            "code": "*110*58#"
+          },
+          {
+            "title": {
+              "ru": "10 MB",
+              "uz": "10 MB"
+            },
+            "price": 900,
+            "code": "*110*1*14#"
+          },
+          {
+            "title": {
+              "ru": "20 MB",
+              "uz": "20 MB"
+            },
+            "price": 1500,
+            "code": "*110*0*15#"
+          },
+          {
+            "title": {
+              "ru": "30 MB",
+              "uz": "30 MB"
+            },
+            "price": 1900,
+            "code": "*110*0*16#"
+          },
+          {
+            "title": {
+              "ru": "150 MB",
+              "uz": "150 MB"
+            },
+            "price": 4900,
+            "code": "*110*0*17#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Неделя",
+          "uz": "Hafta"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "100 MB",
+              "uz": "100 MB"
+            },
+            "price": 6900,
+            "code": "*110*0*18#"
+          },
+          {
+            "title": {
+              "ru": "400 MB",
+              "uz": "400 MB"
+            },
+            "price": 11900,
+            "code": "*110*0*19#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Месяц",
+          "uz": "Oy"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "4G Oy",
+              "uz": "4G Oy"
+            },
+            "desc": {
+              "ru": "25000 MB/месяц в <b>только</b> для сети 4G.",
+              "uz": "Faqatgina 4G tarmog'i uchun oyiga 25000 MB internet."
+            },
+            "price": 50000,
+            "code": "*110*59#"
+          },
+          {
+            "title": {
+              "ru": "1000 MB",
+              "uz": "1000 MB"
+            },
+            "price": 10000,
+            "code": "*1*1#"
+          },
+          {
+            "title": {
+              "ru": "3000 MB",
+              "uz": "3000 MB"
+            },
+            "price": 20000,
+            "code": "*1*2#"
+          },
+          {
+            "title": {
+              "ru": "6000 MB",
+              "uz": "6000 MB"
+            },
+            "price": 30000,
+            "code": "*1*3#"
+          },
+          {
+            "title": {
+              "ru": "9000 MB",
+              "uz": "9000 MB"
+            },
+            "price": 40000,
+            "code": "*1*4#"
+          },
+          {
+            "title": {
+              "ru": "12000 MB",
+              "uz": "12000 MB"
+            },
+            "price": 50000,
+            "code": "*1*5#"
+          },
+          {
+            "title": {
+              "ru": "15000 MB",
+              "uz": "15000 MB"
+            },
+            "price": 60000,
+            "code": "*1*6#"
+          },
+          {
+            "title": {
+              "ru": "20000 MB",
+              "uz": "20000 MB"
+            },
+            "price": 70000,
+            "code": "*1*7#"
+          },
+          {
+            "title": {
+              "ru": "30000 MB",
+              "uz": "30000 MB"
+            },
+            "price": 90000,
+            "code": "*1*8#"
+          }
+        ]
+      }
+    ]
+  },
+  "tariffs": {
+    "sections": [
+      {
+        "title": {
+          "ru": "Месяц",
+          "uz": "Oy"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "Oson 10",
+              "uz": "Oson 10"
+            },
+            "price": 10000,
+            "minAll": 10,
+            "minIn": 0,
+            "net2": 0,
+            "net": 10,
+            "sms": 10,
+            "code": "*110*61#"
+          },
+          {
+            "title": {
+              "ru": "Allo",
+              "uz": "Allo"
+            },
+            "price": 15000,
+            "minAll": 600,
+            "minIn": 0,
+            "net2": 0,
+            "net": 0,
+            "sms": 600,
+            "code": "*110*40#"
+          },
+          {
+            "title": {
+              "ru": "ZO'R 2",
+              "uz": "ZO'R 2"
+            },
+            "price": 20000,
+            "minAll": 2000,
+            "net": 2000,
+            "sms": 2000,
+            "code": "*110*36#"
+          },
+          {
+            "title": {
+              "ru": "Новый Super ХИТ",
+              "uz": "Yangi Super XIT"
+            },
+            "price": 33333,
+            "minAll": 1000,
+            "minIn": 0,
+            "net": 4000,
+            "sms": 400,
+            "code": "*110*37#"
+          },
+          {
+            "title": {
+              "ru": "ZO'R 6",
+              "uz": "ZO'R 6"
+            },
+            "price": 35000,
+            "minAll": "VIP",
+            "net": 6000,
+            "sms": 5000,
+            "code": "*110*60#"
+          },
+          {
+            "title": {
+              "ru": "ZO'R 10",
+              "uz": "ZO'R 10"
+            },
+            "price": 50000,
+            "minAll": "VIP",
+            "net": 10000,
+            "sms": 5000,
+            "code": "*110*38#"
+          },
+          {
+            "title": {
+              "ru": "ZO'R 15",
+              "uz": "ZO'R 15"
+            },
+            "price": 70000,
+            "minAll": "VIP",
+            "net": 15000,
+            "sms": 5000,
+            "code": "*110*39#"
+          },
+          {
+            "title": {
+              "ru": "Status Silver New",
+              "uz": "Status Silver New"
+            },
+            "price": 90000,
+            "minAll": "VIP",
+            "net": 20000,
+            "sms": 5000,
+            "code": "*110*3#"
+          },
+          {
+            "title": {
+              "ru": "Status Gold New",
+              "uz": "Status Gold New"
+            },
+            "price": 130000,
+            "minAll": "VIP",
+            "net": 30000,
+            "sms": 10000,
+            "code": "*110*2#"
+          },
+          {
+            "title": {
+              "ru": "Status Platinum New",
+              "uz": "Status Platinum New"
+            },
+            "price": 189000,
+            "minAll": "VIP",
+            "net": 100000,
+            "sms": 10000,
+            "code": "*110*1#"
+          },
+          {
+            "title": {
+              "ru": "Bolajon",
+              "uz": "Bolajon"
+            },
+            "price": 11500,
+            "minAll": 0,
+            "minIn": 500,
+            "net": 1500,
+            "sms": 0,
+            "code": "*110*538#"
+          },
+          {
+            "title": {
+              "ru": "Click+",
+              "uz": "Click+"
+            },
+            "price": 15000,
+            "minAll": 0,
+            "net": 1000,
+            "net2": 2000,
+            "sms": 0,
+            "code": "*110*22#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "День",
+          "uz": "Kun"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "Kunlik",
+              "uz": "Kunlik"
+            },
+            "price": 600,
+            "minAll": 60,
+            "net": 60,
+            "sms": 0,
+            "code": "*110*580#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Пакеты",
+          "uz": "To'plamlar"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "Extra 200",
+              "uz": "Extra 200"
+            },
+            "price": 10000,
+            "minAll": 200,
+            "net": 200,
+            "period": 30,
+            "sms": 0,
+            "code": "*110*500#"
+          },
+          {
+            "title": {
+              "ru": "Extra 400",
+              "uz": "Extra 400"
+            },
+            "price": 18000,
+            "minAll": 400,
+            "net": 400,
+            "period": 30,
+            "sms": 0,
+            "code": "*110*501#"
+          },
+          {
+            "title": {
+              "ru": "Extra 600",
+              "uz": "Extra 600"
+            },
+            "price": 25000,
+            "minAll": 600,
+            "net": 600,
+            "period": 30,
+            "sms": 0,
+            "code": "*110*502#"
+          }
+        ]
+      }
+    ]
+  },
+  "sms": {
+    "sections": [
+      {
+        "title": {
+          "ru": "День",
+          "uz": "Kun"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "20 SMS",
+              "uz": "20 SMS"
+            },
+            "price": 500,
+            "code": "*110*161#"
+          },
+          {
+            "title": {
+              "ru": "50 SMS",
+              "uz": "50 SMS"
+            },
+            "price": 1000,
+            "code": "*110*162#"
+          },
+          {
+            "title": {
+              "ru": "250 SMS",
+              "uz": "250 SMS"
+            },
+            "price": 1300,
+            "code": "*110*151#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Месяц",
+          "uz": "Oy"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "100 SMS",
+              "uz": "100 SMS"
+            },
+            "price": 5263,
+            "code": "*110*044#"
+          },
+          {
+            "title": {
+              "ru": "500 SMS",
+              "uz": "500 SMS"
+            },
+            "price": 13683,
+            "code": "*110*045#"
+          },
+          {
+            "title": {
+              "ru": "1000 SMS",
+              "uz": "1000 SMS"
+            },
+            "price": 22103,
+            "code": "*110*046#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Международ",
+          "uz": "Xalqaro"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "25 SMS",
+              "uz": "25 SMS"
+            },
+            "price": 5263,
+            "code": "*110*041#"
+          },
+          {
+            "title": {
+              "ru": "50 SMS",
+              "uz": "50 SMS"
+            },
+            "price": 8420,
+            "code": "*110*042#"
+          },
+          {
+            "title": {
+              "ru": "100 SMS",
+              "uz": "100 SMS"
+            },
+            "price": 12630,
+            "code": "*110*043#"
+          }
+        ]
+      }
+    ]
+  },
+  "minutes": {
+    "sections": [
+      {
+        "items": [
+          {
+            "title": {
+              "ru": "600 мин",
+              "uz": "600 daq"
+            },
+            "price": 10000,
+            "period": 30,
+            "code": ""
+          },
+          {
+            "title": {
+              "ru": "200 мин",
+              "uz": "200 daq"
+            },
+            "price": 10000,
+            "period": 30,
+            "code": ""
+          },
+          {
+            "title": {
+              "ru": "400 мин",
+              "uz": "400 daq"
+            },
+            "price": 18000,
+            "period": 30,
+            "code": ""
+          },
+          {
+            "title": {
+              "ru": "600 мин",
+              "uz": "600 daq"
+            },
+            "price": 25000,
+            "period": 30,
+            "code": ""
+          }
+        ]
+      }
+    ]
+  },
+  "campaigns": {
+    "sections": [
+      {
+        "title": {
+          "ru": "Акции",
+          "uz": "Aksiyalar"
+        },
+        "plain": true,
+        "items": [
+          {
+            "title": {
+              "ru": "Бонус: 100 мин и 100 MB",
+              "uz": "Bonus: 100 daqiqa va 100 MB"
+            },
+            "desc": {
+              "ru": "<p>Пополните счет на 10,000 сум и больше, и получите минуты и мегабайты в подарок на 7 день.</p>",
+              "uz": "<p>10,000 so`m va undan ko`prog`iga hisobingizni to`ldiring va 7 kunga qo`shimcha daqiqa va MG`larga ega bo`ling.</p>"
+            }
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Новости",
+          "uz": "Yangiliklar"
+        },
+        "plain": true,
+        "items": [
+          {
+            "title": {
+              "ru": "Безлимитный 4G",
+              "uz": "Cheksiz 4G Internet"
+            },
+            "desc": {
+              "ru": "<p>4G UNLIM 1 день - 10 000 сум! 4G UNLIM 1 месяц - 50 000 сум! Подключите пакет 4G UNLIM и броздите просторы интернета без ограничения!</p>",
+              "uz": "<p>4G UNLIM 1 kunga - 10 000 so`m! 4G UNLIM 1 oyga - 50 000 so`m! 4G UNLIM paketlarini yoqtiring va 4G tarmog`ida cheksiz internetga ega bo`ling!</p>"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "sections": [
+      {
+        "items": [
+          {
+            "title": {
+              "ru": "Для абонентов",
+              "uz": "Abonentlar uchun"
+            },
+            "desc": {
+              "ru": "Наберите короткий номер 0611. Звонки бесплатные. Только для физических лиц.",
+              "uz": "Beeline abonent raqamidan 0611 qisqa raqamiga qo'ng'iroq qiling. Qo'ng'iroqlar bepul. Faqat jismoniy shaxslar uchun."
+            },
+            "code": "0611",
+            "tell": true
+          },
+          {
+            "title": {
+              "ru": "Со всех номеров",
+              "uz": "Hamma raqamlardan"
+            },
+            "desc": {
+              "ru": "На номер <b>+998 90 1850055</b> можно позвонить со всех номеров.",
+              "uz": "<b>+998 90 1850055</b> raqamiga hamma telefon raqamlaridan qo'ng'iroq qilsa bo'ladi."
+            },
+            "code": "+998 90 185-00-55",
+            "tell": true
+          },
+          {
+            "title": {
+              "ru": "E-Mail",
+              "uz": "E-Mail"
+            },
+            "desc": {
+              "ru": "Ваши вопросы и пожелания можно также отправить на электронный адрес <b>0611@beeline.uz</b>.",
+              "uz": "<b>0611@beeline.uz</b> elektron pochtasiga mijozlar savovllarini yuborishlari mumkin."
+            },
+            "codeDisplay": "0611@beeline.uz"
+          },
+          {
+            "title": {
+              "ru": "Наша поддержка",
+              "uz": "Bizning sahifalar"
+            },
+            "desc": {
+              "ru": "Telegram Bot: <a href='http://t.me/USSDHelpBot'>@USSDHelpBot</a>.<br>Telegram канал: <a href='http://t.me/ussdhelp'>@ussdhelp</a>.<br>Instagram: <a href='https://www.instagram.com/ussd.help/'>@ussd.help</a>.<br>Facebook: <a href='https://www.facebook.com/ussd.help'>fb.me/ussd.help</a>.",
+              "uz": "Telegram Bot: <a href='http://t.me/USSDHelpBot'>@USSDHelpBot</a>.<br>Telegram kanal: <a href='http://t.me/ussdhelp'>@ussdhelp</a>.<br>Instagram: <a href='https://www.instagram.com/ussd.help/'>@ussd.help</a>.<br>Facebook: <a href='https://www.facebook.com/ussd.help'>fb.me/ussd.help</a>."
+            },
+            "code": "ussd.help@gmail.com"
+          }
+        ]
+      }
+    ]
+  }
+}
