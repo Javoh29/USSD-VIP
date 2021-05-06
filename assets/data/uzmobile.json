@@ -1,374 +1,123 @@
 {
   "ussd": {
-    "sections": [
-      {
-        "title": {
-          "ru": "USSD Коды",
-          "uz": "USSD Kodlar"
-        },
-        "items": [
-          {
-            "title": {
-              "ru": "Основное меню",
-              "uz": "Boshqarish"
-            },
-            "desc": {
-              "ru": "Основное меню для управление вашем счетом. Тут, вы можете получить всю информацию о вашем счете, тарифе, услугами, а также подключить либо отключить любую услугу.",
-              "uz": "Xisobingizni boshqarish uchun. Bu yerda siz xisobbingiz haqida ma'lumotlar olishingiz va xizmatlarga ulanishingiz mumkin."
-            },
-            "code": "*100#"
-          },
-          {
-            "title": {
-              "ru": "Проверить баланс",
-              "uz": "Balans tekshirish"
-            },
-            "desc": {
-              "ru": "Проверить остаток средств на вашем счету.",
-              "uz": "Xisobingizdagi mablag' qoldiqni ko'rish uchun ushbu kodni yuboring."
-            },
-            "code": "*100*1#"
-          },
-          {
-            "title": {
-              "ru": "Проверить баланс",
-              "uz": "Xisobni tekshirish"
-            },
-            "desc": {
-              "ru": "Наберите этот код для проверки вашего баланса.",
-              "uz": "Xisobingizdagi qoldiqni ko'rish uchun ushbu kodni yuborishingiz mumkin."
-            },
-            "code": "*107#"
-          },
-          {
-            "title": {
-              "ru": "Проверить остаток",
-              "uz": "Qoldiqni tekshirish"
-            },
-            "desc": {
-              "ru": "Проверить остаток минут, SMS и трафика.",
-              "uz": "Xisobingizda qolgan daqiqalar, SMSlar, hamda trafik qoldiqlarini ko'rish."
-            },
-            "code": "*100*2#"
-          },
-          {
-            "title": {
-              "ru": "Пароль для кабинета",
-              "uz": "Shaxsiy kabinet paroli"
-            },
-            "desc": {
-              "ru": "Получить пароль для входа в личный кабинет.",
-              "uz": "Shaxsiy kabinetga kirishingiz uchun parol'ni olish uchun."
-            },
-            "code": "*100*3#"
-          },
-          {
-            "title": {
-              "ru": "Мой номер",
-              "uz": "Mening raqamim"
-            },
-            "desc": {
-              "ru": "Наберите этот код для определения вашего номера.",
-              "uz": "Telefon raqamingizni aniqlash uchun, ushbu kodni yuboring."
-            },
-            "code": "*100*4#"
-          },
-          {
-            "title": {
-              "ru": "Мои номера",
-              "uz": "Mening raqamlarim"
-            },
-            "desc": {
-              "ru": "Получите список всех номеров зарегистрированные на ваши паспортные данные.",
-              "uz": "Pasportingizga ro'yhatdan o'tgan hamma telefon raqamlarni ro'yhatini olish."
-            },
-            "code": "*100*5#"
-          },
-          {
-            "title": {
-              "ru": "Restart",
-              "uz": "Restart xizmati"
-            },
-            "desc": {
-              "ru": "Услуга позволяет повторно (до наступления следующего расчетного периода) активировать лимиты, предоставляемые согласно тарифному плану. Услуга доступна для абонентов тарифных планов: Street, Flash и Royal в активном статусе.",
-              "uz": "Oylik trafik bo'yicha limitlaringiz tugasa bub kodni tering va oyning boshini kutib o'tirmasdan, tarifingiz to'lovini to'lab limitlarga ega bo'ling."
-            },
-            "code": "*555#"
-          },
-          {
-            "title": {
-              "ru": "В долг",
-              "uz": "Qarz olish xizmati"
-            },
-            "desc": {
-              "ru": "Воспользуйтесь этой услугой чтобы пополнить счет в долг. Услуга платная.",
-              "uz": "Bu xizmatdan foydalanib, qarzga shaxsiy xisobingizni to'ldirishingiz mumkin. Xizmat pullik."
-            },
-            "code": "*150#"
-          },
-          {
-            "title": {
-              "ru": "Статус переадресации",
-              "uz": "Pereadresatsiyani tekshirish"
-            },
-            "desc": {
-              "ru": "Воспользуйтесь для проверки статуса переадресации с данного номера на другой номер.",
-              "uz": "Pereadresatsiya xizmati holatni tekshirish uchun foydalaning."
-            },
-            "code": "*#67#"
-          }
-        ]
+    "sections": {
+      "title": {
+        "ru": "USSD Коды",
+        "uz": "USSD Kodlar"
       },
-      {
-        "title": {
-          "ru": "Услуги",
-          "uz": "Xizmatlar"
+      "items": [
+        {
+          "title": {
+            "ru": "Основное меню",
+            "uz": "Boshqarish"
+          },
+          "desc": {
+            "ru": "Основное меню для управление вашем счетом. Тут, вы можете получить всю информацию о вашем счете, тарифе, услугами, а также подключить либо отключить любую услугу.",
+            "uz": "Xisobingizni boshqarish uchun. Bu yerda siz xisobbingiz haqida ma'lumotlar olishingiz va xizmatlarga ulanishingiz mumkin."
+          },
+          "code": "*100#"
         },
-        "plain": true,
-        "items": [
-          {
-            "title": {
-              "ru": "LTE (4G)",
-              "uz": "LTE (4G)"
-            },
-            "desc": {
-              "ru": "Подключить услугу LTE (4G).",
-              "uz": "LTE (4G) xizmatini yoqish."
-            },
-            "code": "*111*2*7*1#",
-            "codeOff": "*111*2*7*2#"
+        {
+          "title": {
+            "ru": "Проверить баланс",
+            "uz": "Balans tekshirish"
           },
-          {
-            "title": {
-              "ru": "Скрытый вызов (одноразово)",
-              "uz": "Yashirin qo'ng'iroq (1 martalik)"
-            },
-            "desc": {
-              "ru": "Для скрытия своего номера при звонке на другой номер, наберите вызов в следующим виде: <code>#9989XABCDEFG</code>.",
-              "uz": "Telefon raqamini <code>#9989XABCDEFG</code> ko'rinishida tering."
-            },
-            "codeDisplay": true
+          "desc": {
+            "ru": "Проверить остаток средств на вашем счету.",
+            "uz": "Xisobingizdagi mablag' qoldiqni ko'rish uchun ushbu kodni yuboring."
           },
-          {
-            "title": {
-              "ru": "Дневной VIP",
-              "uz": "Kunlik VIP"
-            },
-            "desc": {
-              "ru": "Безлимитные звонки внутри сети в течении целого дня.",
-              "uz": "Tarmoq ichida kunlik VIP xizmati bilan, siz tarmoq ichida cheksiz so'zlashishingiz mumkin."
-            },
-            "code": "*111*1*15*1#",
-            "codeOff": "*111*1*15*2#"
-          },
-          {
-            "title": {
-              "ru": "Ночные звонки",
-              "uz": "Tungi qo'ng'iroqlar"
-            },
-            "desc": {
-              "ru": "Подключить услугу ночные звонки.",
-              "uz": "Tungi qo'ng'iroqlar xizmatini sizga tungi vaqtda cheksiz gaplashish imkoniyatini beradi."
-            },
-            "code": "*111*1/2/3*16*1#",
-            "codeOff": "*111*1/2/3*16*2#",
-            "codeDisplay": true
-          },
-          {
-            "title": {
-              "ru": "Услуга ожидания",
-              "uz": "'Ojidanie' xizmati"
-            },
-            "desc": {
-              "ru": "Подключить услугу ожидания при паралельном звонке на ваш номер.",
-              "uz": "Siz gaplashib turganizda boshqa yo'nalishdan qo'ng'iroqlar qabul qilish imkoniyati."
-            },
-            "code": "*43#",
-            "codeOff": "#43#"
-          },
-          {
-            "title": {
-              "ru": "Вам звонили",
-              "uz": "Sizga qo'ng'iroq qilishdi"
-            },
-            "desc": {
-              "ru": "Подключить услугу \"Пропущенный звонок\". После активации услуги, абоненты могут получать уведомления на свой телефон о пропущенных звонках, когда телефон был выключен или находился вне зоны действия сети. Звонящему абоненту также доставляется SMS-уведомление о том, что вызываемый абонент в сети.",
-              "uz": "Endi Uztelecom abonentlari telefon qurilmasi o'chik bob'lgan xolda ham qo'ng'iroqlarni qabul qilishlari mumkin."
-            },
-            "code": "*111*1*4*1#",
-            "codeOff": "*111*1*4*2#"
-          },
-          {
-            "title": {
-              "ru": "Запрет на входящии звонки и СМС",
-              "uz": "Kirish qo'ng'iroq va SMSlarni taqiqlash"
-            },
-            "desc": {
-              "ru": "Запретить все входящии звонки и СМС.",
-              "uz": "Kiruvchi qo'ng'iroq va SMSlarni taqiqlash xizmati."
-            },
-            "code": "*35*0000#",
-            "codeOff": "#35*0000#"
-          },
-          {
-            "title": {
-              "ru": "Запрет на исходящие звонки и СМС",
-              "uz": "Chiquvchi qo'ng'iroq va SMSlarni taqiqlash"
-            },
-            "desc": {
-              "ru": "Подкльчить услугу.",
-              "uz": "Chiquvchi qo'ng'iroq va SMSlarni taqiqlash xizmatini boshqarish."
-            },
-            "code": "*33*0000#",
-            "codeOff": "#33*0000#"
-          },
-          {
-            "title": {
-              "ru": "Переадресация",
-              "uz": "Pereadresatsiya"
-            },
-            "desc": {
-              "ru": "Для переадресации всех звонков на ваш номер, наберите следующий код: <b><code>*21*+99899НОМЕР#</code></b>.",
-              "uz": "Raqamingizga kelgan qo'ng'iroqlarni boshqa raqamga yo'naltirish xizmati. Buning uchun <b><code>*21*+99899RAQAM#</code></b> kodni tering."
-            },
-            "codeDisplay": true
-          },
-          {
-            "title": {
-              "ru": "Услуга \"Для семьи\"",
-              "uz": "Oila uchun xizmati"
-            },
-            "desc": {
-              "ru": "При активации услуги все исходящие звонки внутри группы – 0 сум, включенный лимит минут не расходуется. Группой являются все номера, оформленные на один договор.",
-              "uz": "Oila uchun xizmatini yoqish."
-            },
-            "code": "*111*1*17*1*1#",
-            "codeOff": "*111*1*17*1*2#"
-          },
-          {
-            "title": {
-              "ru": "Запрет на перевод MB",
-              "uz": "MBlarni o'tkazishni taqiqlash"
-            },
-            "desc": {
-              "ru": "Не хотите чтобы с вашего счета по ошибке кто либо не перевел трафик? Поставьте запрет на даннуп услугу.",
-              "uz": "Sizdagi internet trafikni boshqa abobnentga o'tkazish xizmatini taqiqlash."
-            },
-            "code": "*111*1*26*1#"
-          },
-          {
-            "title": {
-              "ru": "Internet non-stop",
-              "uz": "Internet non-stop"
-            },
-            "desc": {
-              "ru": "Для управления услугой \"Internet non-stop\".",
-              "uz": "\"Internet non-stop\" xizmatini boshqarish menyusi."
-            },
-            "code": "*121#"
-          }
-        ]
-      },
-      {
-        "title": {
-          "ru": "Платные услуги",
-          "uz": "Pullik xizmatlar"
+          "code": "*100*1#"
         },
-        "plain": true,
-        "items": [
-          {
-            "title": {
-              "ru": "Управление платными услугами",
-              "uz": "Pullik xizmatlarni boshqarish"
-            },
-            "desc": {
-              "ru": "Наберите этот номер и управляйте всеми своими платными услугами в одном месте.",
-              "uz": "Bu kodni tering va barcha pullik xizmatlaringizni bir joyda boshqaring."
-            },
-            "code": "*7777#"
+        {
+          "title": {
+            "ru": "Проверить баланс",
+            "uz": "Xisobni tekshirish"
           },
-          {
-            "title": {
-              "ru": "Услуга \"ZiyoNet\"",
-              "uz": "ZiyoNet xizmati"
-            },
-            "desc": {
-              "ru": "Очень дешевый интернет для сайтов в сети ZiyoNet. Стоимость трафика: 8 сум/MB.",
-              "uz": "Ushbu xizmat sizga ZiyoNet tizimiga kirgan barcha saytlari uchun arzon internet: 8 so'm/MB."
-            },
-            "code": "*111*2*12*1#",
-            "codeOff": "*111*2*12*2#"
+          "desc": {
+            "ru": "Наберите этот код для проверки вашего баланса.",
+            "uz": "Xisobingizdagi qoldiqni ko'rish uchun ushbu kodni yuborishingiz mumkin."
           },
-          {
-            "title": {
-              "ru": "Штрафы ПДД",
-              "uz": "YPX jarimalari"
-            },
-            "desc": {
-              "ru": "Информация о штрафах ПДД.<br>Отправьте «<b>номер автомабиля</b> пробел <b>серия и номер тех. паспорта</b>» на короткий номер <code>8860</code>. (Например: 01R999XY AAC5447770).",
-              "uz": "YPX qoidalarini bbuzganlik haqida ma'lumot.<br><code>8860</code> raqaamiga «<b>avtomobibl davlat raqami</b> bo'shliq <b>tex.pasport seriyasi va raqami</b>» (Masalan: 01R999XY AAC5447770)."
-            },
-            "codeDisplay": true
+          "code": "*107#"
+        },
+        {
+          "title": {
+            "ru": "Проверить остаток",
+            "uz": "Qoldiqni tekshirish"
           },
-          {
-            "title": {
-              "ru": "Викторина",
-              "uz": "Viktorina xizmati"
-            },
-            "desc": {
-              "ru": "Для активации услуги отправьте СМС на номер <code>8185</code>. Для отказа от услуги отправьте слово 'STOP' на номер <code>8860</code>.",
-              "uz": "Xizmatni faollashtirish uchun <code>8185</code> raqamiga SMS yuboring. Xizmaatni o'chirish uchun <code>8185</code> raqamiga 'STOP' so'zini yuboring"
-            },
-            "codeDisplay": true
+          "desc": {
+            "ru": "Проверить остаток минут, SMS и трафика.",
+            "uz": "Xisobingizda qolgan daqiqalar, SMSlar, hamda trafik qoldiqlarini ko'rish."
           },
-          {
-            "title": {
-              "ru": "Словомания",
-              "uz": "Slovomaniya xizmati"
-            },
-            "desc": {
-              "ru": "Для активации услуги отправьте СМС на номер <code>8080</code>. Для отказа от услуги отправьте слово 'STOP' на номер <code>8080</code>.",
-              "uz": "Xizmatni faollashtirish uchun <code>8080</code> raqamiga SMS yubobring. Xizmatni o'chirish uchun <code>8080</code> raqamiga 'STOP' so'zini yuboring."
-            },
-            "codeDisplay": true
+          "code": "*100*2#"
+        },
+        {
+          "title": {
+            "ru": "Пароль для кабинета",
+            "uz": "Shaxsiy kabinet paroli"
           },
-          {
-            "title": {
-              "ru": "Игры Uztelecom",
-              "uz": ""
-            },
-            "desc": {
-              "ru": "Голосовые и СМС игры от Uztelecom.",
-              "uz": "Uztelecomdan SMS va ovozli o'yinlar."
-            },
-            "code": "*950*1#",
-            "codeOff": "*950*2#"
+          "desc": {
+            "ru": "Получить пароль для входа в личный кабинет.",
+            "uz": "Shaxsiy kabinetga kirishingiz uchun parol'ni olish uchun."
           },
-          {
-            "title": {
-              "ru": "Развлечения",
-              "uz": "Ko'ngilochar xizmatlar"
-            },
-            "desc": {
-              "ru": "Для активации услуги отправьте СМС на номер <code>4252</code>. Для отказа от услуги отправьте слово 'STOP' на номер <code>4252</code>.",
-              "uz": "Xizmatni faollashtirish uchun <code>4252</code> raqamiga SMS yubobring. Xizmatni o'chirish uchun <code>4252</code> raqamiga 'STOP' so'zini yuboring."
-            },
-            "codeDisplay": true
+          "code": "*100*3#"
+        },
+        {
+          "title": {
+            "ru": "Мой номер",
+            "uz": "Mening raqamim"
           },
-          {
-            "title": {
-              "ru": "Отключить другие услуги",
-              "uz": "Pullik xizmatlarni o'chirish"
-            },
-            "desc": {
-              "ru": "Для отключения любой другой платной услуги, отправьте слово 'STOP' на короткий номер с которого пришло СМС сообщение.",
-              "uz": "Xizmatni o'chirish uchun, SMS kelgan raqamga 'STOP' so'zini yuboring."
-            },
-            "codeDisplay": true
-          }
-        ]
-      }
-    ]
+          "desc": {
+            "ru": "Наберите этот код для определения вашего номера.",
+            "uz": "Telefon raqamingizni aniqlash uchun, ushbu kodni yuboring."
+          },
+          "code": "*100*4#"
+        },
+        {
+          "title": {
+            "ru": "Мои номера",
+            "uz": "Mening raqamlarim"
+          },
+          "desc": {
+            "ru": "Получите список всех номеров зарегистрированные на ваши паспортные данные.",
+            "uz": "Pasportingizga ro'yhatdan o'tgan hamma telefon raqamlarni ro'yhatini olish."
+          },
+          "code": "*100*5#"
+        },
+        {
+          "title": {
+            "ru": "Restart",
+            "uz": "Restart xizmati"
+          },
+          "desc": {
+            "ru": "Услуга позволяет повторно (до наступления следующего расчетного периода) активировать лимиты, предоставляемые согласно тарифному плану. Услуга доступна для абонентов тарифных планов: Street, Flash и Royal в активном статусе.",
+            "uz": "Oylik trafik bo'yicha limitlaringiz tugasa bub kodni tering va oyning boshini kutib o'tirmasdan, tarifingiz to'lovini to'lab limitlarga ega bo'ling."
+          },
+          "code": "*555#"
+        },
+        {
+          "title": {
+            "ru": "В долг",
+            "uz": "Qarz olish xizmati"
+          },
+          "desc": {
+            "ru": "Воспользуйтесь этой услугой чтобы пополнить счет в долг. Услуга платная.",
+            "uz": "Bu xizmatdan foydalanib, qarzga shaxsiy xisobingizni to'ldirishingiz mumkin. Xizmat pullik."
+          },
+          "code": "*150#"
+        },
+        {
+          "title": {
+            "ru": "Статус переадресации",
+            "uz": "Pereadresatsiyani tekshirish"
+          },
+          "desc": {
+            "ru": "Воспользуйтесь для проверки статуса переадресации с данного номера на другой номер.",
+            "uz": "Pereadresatsiya xizmati holatni tekshirish uchun foydalaning."
+          },
+          "code": "*#67#"
+        }
+      ]
+    }
   },
   "internet": {
     "sections": [
@@ -553,7 +302,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*1*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*1*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*1*3#."
             },
             "price": 24000,
             "code": "*147*10055*21447#",
@@ -567,7 +316,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*2*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*2*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*2*3#."
             },
             "price": 32000,
             "code": "*147*10056*21447#",
@@ -581,7 +330,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*3*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*3*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*3*3#."
             },
             "price": 41000,
             "code": "*147*10057*21447#",
@@ -595,7 +344,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*4*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*4*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*4*3#."
             },
             "price": 50000,
             "code": "*147*10151*21447#",
@@ -609,7 +358,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*5*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*5*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*5*3#."
             },
             "price": 65000,
             "code": "*147*10152*21447#",
@@ -623,7 +372,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*6*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*6*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*6*3#."
             },
             "price": 75000,
             "code": "*147*10153*21447#",
@@ -637,7 +386,7 @@
             },
             "desc": {
               "ru": "Статус: *111*2*14*7*3#.",
-              "uz": "<p>Xolatni tekshirish: *111*2*14*7*3#.</p>"
+              "uz": "Xolatni tekshirish: *111*2*14*7*3#."
             },
             "price": 85000,
             "code": "*147*10154*21447#",
@@ -801,8 +550,8 @@
               "uz": "Oddiy 10"
             },
             "desc": {
-              "ru": "<p>Исходящие: 10 сум/мин.</p><p>SMS: 10 сум.</p><p>Интерне: 10 сум/MB.</p>",
-              "uz": "<p>Chiquvchi: 10 so'm/daq.</p><p>SMS narxi: 10 so'm.</p>"
+              "ru": "Исходящие: 10 сум/мин.SMS: 10 сум.Интерне: 10 сум/MB.",
+              "uz": "Chiquvchi: 10 so'm/daq.SMS narxi: 10 so'm."
             },
             "price": 10000,
             "minAll": 10,
@@ -817,8 +566,8 @@
               "uz": "Street"
             },
             "desc": {
-              "ru": "<p>Цена SMS: 84 сум.</p><p>Интернет: 160 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 84 so'm.</p><p>Internet: 160 so'm/MB.</p>"
+              "ru": "Цена SMS: 84 сум.Интернет: 160 сум/MB.",
+              "uz": "SMS narxi: 84 so'm.Internet: 160 so'm/MB."
             },
             "price": 39900,
             "minAll": 750,
@@ -833,8 +582,8 @@
               "uz": "OnLime"
             },
             "desc": {
-              "ru": "<p>Цена SMS: 84 сум.</p><p>Интернет: 280 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 84 so'm.</p><p>Internet: 280 so'm/MB.</p>"
+              "ru": "Цена SMS: 84 сум.Интернет: 280 сум/MB.",
+              "uz": "SMS narxi: 84 so'm.Internet: 280 so'm/MB."
             },
             "price": 49900,
             "minAll": 1000,
@@ -849,8 +598,8 @@
               "uz": "Flash"
             },
             "desc": {
-              "ru": "<p>Цена SMS: 84 сум.</p><p>Интернет: 160 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 84 so'm.</p><p>Internet: 160 so'm/MB.</p>"
+              "ru": "Цена SMS: 84 сум.Интернет: 160 сум/MB.",
+              "uz": "SMS narxi: 84 so'm.Internet: 160 so'm/MB."
             },
             "price": 69900,
             "minAll": 1500,
@@ -865,8 +614,8 @@
               "uz": "Ishbilarmon"
             },
             "desc": {
-              "ru": "<p>Цена SMS: 80 сум.</p><p>Интерне: 350 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 80 so'm.</p><p>Internet: 350 so'm/MB.</p>"
+              "ru": "Цена SMS: 80 сум.Интерне: 350 сум/MB.",
+              "uz": "SMS narxi: 80 so'm.Internet: 350 so'm/MB."
             },
             "price": 99000,
             "minAll": "VIP",
@@ -880,8 +629,8 @@
               "uz": "Royal"
             },
             "desc": {
-              "ru": "<p>Цена SMS: 80 сум.</p>",
-              "uz": "<p>SMS narxi: 80 so'm.</p>"
+              "ru": "Цена SMS: 80 сум.",
+              "uz": "SMS narxi: 80 so'm."
             },
             "price": 149900,
             "minAll": "VIP",
@@ -903,8 +652,8 @@
               "uz": "Units 700"
             },
             "desc": {
-              "ru": "<p>Срок: 7 дней.</p><p>Включенный лимит: 700 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 7 kun.</p><p>Kiritilgan limit: 700 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 7 дней.Включенный лимит: 700 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 7 kun.Kiritilgan limit: 700 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 7000,
             "minAll": 0,
@@ -919,8 +668,8 @@
               "uz": "Units 1500"
             },
             "desc": {
-              "ru": "<p>Срок: 15 дней.</p><p>Включенный лимит: 1500 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 15 kun.</p><p>Kiritilgan limit: 1500 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 15 дней.Включенный лимит: 1500 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 15 kun.Kiritilgan limit: 1500 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 15000,
             "minAll": 0,
@@ -935,8 +684,8 @@
               "uz": "Units 4000"
             },
             "desc": {
-              "ru": "<p>Срок: 20 дней.</p><p>Включенный лимит: 4000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 20 kun.</p><p>Kiritilgan limit: 4000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 20 дней.Включенный лимит: 4000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 20 kun.Kiritilgan limit: 4000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 20000,
             "minAll": 0,
@@ -951,8 +700,8 @@
               "uz": "Units 8000"
             },
             "desc": {
-              "ru": "<p>Срок: 30 дней.</p><p>Включенный лимит: 8000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 30 kun.</p><p>Kiritilgan limit: 8000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 30 дней.Включенный лимит: 8000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 30 kun.Kiritilgan limit: 8000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 35000,
             "minAll": 0,
@@ -967,8 +716,8 @@
               "uz": "Units 11000"
             },
             "desc": {
-              "ru": "<p>Срок: 30 дней.</p><p>Включенный лимит: 11000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 30 kun.</p><p>Kiritilgan limit: 11000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 30 дней.Включенный лимит: 11000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 30 kun.Kiritilgan limit: 11000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 45000,
             "minAll": 0,
@@ -983,8 +732,8 @@
               "uz": "Units 14000"
             },
             "desc": {
-              "ru": "<p>Срок: 30 дней.</p><p>Включенный лимит: 14000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 30 kun.</p><p>Kiritilgan limit: 14000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 30 дней.Включенный лимит: 14000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 30 kun.Kiritilgan limit: 14000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 55000,
             "minAll": 0,
@@ -999,8 +748,8 @@
               "uz": "Units 18000"
             },
             "desc": {
-              "ru": "<p>Срок: 30 дней.</p><p>Включенный лимит: 18000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 30 kun.</p><p>Kiritilgan limit: 18000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 30 дней.Включенный лимит: 18000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 30 kun.Kiritilgan limit: 18000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 65000,
             "minAll": 0,
@@ -1015,8 +764,8 @@
               "uz": "Units 22000"
             },
             "desc": {
-              "ru": "<p>Срок: 30 дней.</p><p>Включенный лимит: 22000 Units.</p><p>1 Unit = 1 минута.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>",
-              "uz": "<p>Muddati: 30 kun.</p><p>Kiritilgan limit: 22000 Units.</p><p>1 Unit = 1 daqiqa.</p><p>1 Unit = 1 MB.</p><p>1 Unit = 1 SMS.</p>"
+              "ru": "Срок: 30 дней.Включенный лимит: 22000 Units.1 Unit = 1 минута.1 Unit = 1 MB.1 Unit = 1 SMS.",
+              "uz": "Muddati: 30 kun.Kiritilgan limit: 22000 Units.1 Unit = 1 daqiqa.1 Unit = 1 MB.1 Unit = 1 SMS."
             },
             "price": 75000,
             "minAll": 0,
@@ -1039,8 +788,8 @@
               "uz": "Street Upgrade"
             },
             "desc": {
-              "ru": "<p>Исходящие: 126 сум.</p><p>SMS: 84 сум.</p><p>Интерне: 280 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 84 so'm.</p><p>Internet: 280 so'm/MB.</p>"
+              "ru": "Исходящие: 126 сум.SMS: 84 сум.Интерне: 280 сум/MB.",
+              "uz": "SMS narxi: 84 so'm.Internet: 280 so'm/MB."
             },
             "price": 119700,
             "minAll": 3000,
@@ -1055,8 +804,8 @@
               "uz": "Flash upgrade"
             },
             "desc": {
-              "ru": "<p>Исходящие: 126 сум.</p><p>SMS: 84 сум.</p><p>Интерне: 280 сум/MB.</p>",
-              "uz": "<p>SMS narxi: 84 so'm.</p><p>Internet: 280 so'm/MB.</p>"
+              "ru": "Исходящие: 126 сум.SMS: 84 сум.Интерне: 280 сум/MB.",
+              "uz": "SMS narxi: 84 so'm.Internet: 280 so'm/MB."
             },
             "price": 209700,
             "minAll": 6000,
@@ -1079,8 +828,8 @@
               "uz": "Ta`lim"
             },
             "desc": {
-              "ru": "<p>Исходящие: 40 сум.</p><p>SMS: 84 сум.</p><p>Интерне: 40 сум/MB.</p>",
-              "uz": "<p>Tarif rejasi oliy va o‘rta maxsus o‘quv yurtlari (institutlar, universitetlar, litseylar, kollejlar) talabalari va o‘qituvchilari, shuningdek maktab o‘qituvchilari uchun mo‘ljallangan.</p><p>Chiquvchi: 40 so'm/daq.</p><p>SMS narxi: 84 so'm.</p><p>Internet: 40 so'm.</p>"
+              "ru": "Исходящие: 40 сум.SMS: 84 сум.Интерне: 40 сум/MB.",
+              "uz": "Tarif rejasi oliy va o‘rta maxsus o‘quv yurtlari (institutlar, universitetlar, litseylar, kollejlar) talabalari va o‘qituvchilari, shuningdek maktab o‘qituvchilari uchun mo‘ljallangan.Chiquvchi: 40 so'm/daq.SMS narxi: 84 so'm.Internet: 40 so'm."
             },
             "price": 34900,
             "minAll": 300,
@@ -1095,8 +844,8 @@
               "uz": "Maktab"
             },
             "desc": {
-              "ru": "<p>Исходящие: 40 сум.</p><p>SMS: 84 сум.</p><p>Интерне: 40 сум/MB.</p>",
-              "uz": "<p>Maktab o‘quvchilari uchun mo‘ljallangan.</p><p>Tarif rejasi oliy va o‘rta maxsus o‘quv yurtlari (institutlar, universitetlar, litseylar, kollejlar) talabalari va o‘qituvchilari, shuningdek maktab o‘qituvchilari uchun mo‘ljallangan.</p><p>Chiquvchi: 40 so'm/daq.</p><p>SMS narxi: 84 so'm.</p><p>Internet: 40 so'm.</p>"
+              "ru": "Исходящие: 40 сум.SMS: 84 сум.Интерне: 40 сум/MB.",
+              "uz": "Maktab o‘quvchilari uchun mo‘ljallangan.Tarif rejasi oliy va o‘rta maxsus o‘quv yurtlari (institutlar, universitetlar, litseylar, kollejlar) talabalari va o‘qituvchilari, shuningdek maktab o‘qituvchilari uchun mo‘ljallangan.Chiquvchi: 40 so'm/daq.SMS narxi: 84 so'm.Internet: 40 so'm."
             },
             "price": 29900,
             "minAll": 200,
@@ -1111,8 +860,8 @@
               "uz": "Yoshlar"
             },
             "desc": {
-              "ru": "<p>Включенный лимит минут только внутри тарифного плана.</p><p>Исходящие: 25 сум.</p><p>SMS: 25 сум.</p><p>Интерне: 25 сум/MB.</p>",
-              "uz": "<p>Berilgan tekin daqiqalar faqatgina tarif rejasi doirasida ishlatsa bo'ladi.</p><p>Chiquvchi: 25 so'm/daq.</p><p>SMS narxi: 25 so'm.</p><p>Internet: 25 so'm.</p>"
+              "ru": "Включенный лимит минут только внутри тарифного плана.Исходящие: 25 сум.SMS: 25 сум.Интерне: 25 сум/MB.",
+              "uz": "Berilgan tekin daqiqalar faqatgina tarif rejasi doirasida ishlatsa bo'ladi.Chiquvchi: 25 so'm/daq.SMS narxi: 25 so'm.Internet: 25 so'm."
             },
             "price": 5000,
             "minAll": 0,
@@ -1127,8 +876,8 @@
               "uz": "Bolajon"
             },
             "desc": {
-              "ru": "<p>Интернет трафик предназначен для сайтов сети \"Ziyonet\".</p><p>Исходящие: 40 сум.</p><p>SMS: 20 сум.</p>",
-              "uz": "<p>Internet \"Ziyonet\" tarmog'i doirasida berilgan.</p><p>Chiquvchi: 40 so'm/daq.</p><p>SMS narxi: 20 so'm.</p>"
+              "ru": "Интернет трафик предназначен для сайтов сети \"Ziyonet\".Исходящие: 40 сум.SMS: 20 сум.",
+              "uz": "Internet \"Ziyonet\" tarmog'i doirasida berilgan.Chiquvchi: 40 so'm/daq.SMS narxi: 20 so'm."
             },
             "price": 18000,
             "minAll": 200,
@@ -1199,7 +948,7 @@
             },
             "price": 3360,
             "code": "*9999*1*3*1#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1208,7 +957,7 @@
             },
             "price": 5260,
             "code": "*9999*1*3*2#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1217,7 +966,7 @@
             },
             "price": 16840,
             "code": "*9999*1*3*3#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1226,7 +975,7 @@
             },
             "price": 23150,
             "code": "*9999*1*3*4#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1235,7 +984,7 @@
             },
             "price": 37890,
             "code": "*9999*1*3*5#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1244,7 +993,7 @@
             },
             "price": 58940,
             "code": "*9999*1*3*6#",
-            "period": "30"
+            "period": 30
           },
           {
             "title": {
@@ -1253,7 +1002,7 @@
             },
             "price": 67360,
             "code": "*9999*1*3*7#",
-            "period": "30"
+            "period": 30
           }
         ]
       }
@@ -1450,97 +1199,252 @@
       }
     ]
   },
-  "campaigns": {
+  "services": {
     "sections": [
       {
         "title": {
-          "ru": "Акции",
-          "uz": "Aktsiyalar"
+          "ru": "Услуги",
+          "uz": "Xizmatlar"
         },
-        "plain": true,
         "items": [
           {
             "title": {
-              "ru": "Скидки на ночноой интернет",
-              "uz": "Tungi Internet'ga chegirmalar"
+              "ru": "LTE (4G)",
+              "uz": "LTE (4G)"
             },
             "desc": {
-              "ru": "<p>С 23 февраля по 13 апреля, скидки до 35% на ночные интернет пакеты.</p>",
-              "uz": "<p>2021-yil 23-fevraldan 13-aprelgacha UZTELECOM GSM standartidagi \"Tungi Internet\" xizmati uchun 35% gacha chegirmalar!.</p>"
-            }
+              "ru": "Подключить услугу LTE (4G).",
+              "uz": "LTE (4G) xizmatini yoqish."
+            },
+            "code": "*111*2*7*1#",
+            "codeOff": "*111*2*7*2#"
+          },
+          {
+            "title": {
+              "ru": "Скрытый вызов (одноразово)",
+              "uz": "Yashirin qo'ng'iroq (1 martalik)"
+            },
+            "desc": {
+              "ru": "Для скрытия своего номера при звонке на другой номер, наберите вызов в следующим виде: #9989XABCDEFG.",
+              "uz": "Telefon raqamini #9989XABCDEFG ko'rinishida tering."
+            },
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Дневной VIP",
+              "uz": "Kunlik VIP"
+            },
+            "desc": {
+              "ru": "Безлимитные звонки внутри сети в течении целого дня.",
+              "uz": "Tarmoq ichida kunlik VIP xizmati bilan, siz tarmoq ichida cheksiz so'zlashishingiz mumkin."
+            },
+            "code": "*111*1*15*1#",
+            "codeOff": "*111*1*15*2#"
+          },
+          {
+            "title": {
+              "ru": "Ночные звонки",
+              "uz": "Tungi qo'ng'iroqlar"
+            },
+            "desc": {
+              "ru": "Подключить услугу ночные звонки.",
+              "uz": "Tungi qo'ng'iroqlar xizmatini sizga tungi vaqtda cheksiz gaplashish imkoniyatini beradi."
+            },
+            "code": "*111*1/2/3*16*1#",
+            "codeOff": "*111*1/2/3*16*2#",
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Услуга ожидания",
+              "uz": "'Ojidanie' xizmati"
+            },
+            "desc": {
+              "ru": "Подключить услугу ожидания при паралельном звонке на ваш номер.",
+              "uz": "Siz gaplashib turganizda boshqa yo'nalishdan qo'ng'iroqlar qabul qilish imkoniyati."
+            },
+            "code": "*43#",
+            "codeOff": "#43#"
+          },
+          {
+            "title": {
+              "ru": "Вам звонили",
+              "uz": "Sizga qo'ng'iroq qilishdi"
+            },
+            "desc": {
+              "ru": "Подключить услугу \"Пропущенный звонок\". После активации услуги, абоненты могут получать уведомления на свой телефон о пропущенных звонках, когда телефон был выключен или находился вне зоны действия сети. Звонящему абоненту также доставляется SMS-уведомление о том, что вызываемый абонент в сети.",
+              "uz": "Endi Uztelecom abonentlari telefon qurilmasi o'chik bob'lgan xolda ham qo'ng'iroqlarni qabul qilishlari mumkin."
+            },
+            "code": "*111*1*4*1#",
+            "codeOff": "*111*1*4*2#"
+          },
+          {
+            "title": {
+              "ru": "Запрет на входящии звонки и СМС",
+              "uz": "Kirish qo'ng'iroq va SMSlarni taqiqlash"
+            },
+            "desc": {
+              "ru": "Запретить все входящии звонки и СМС.",
+              "uz": "Kiruvchi qo'ng'iroq va SMSlarni taqiqlash xizmati."
+            },
+            "code": "*35*0000#",
+            "codeOff": "#35*0000#"
+          },
+          {
+            "title": {
+              "ru": "Запрет на исходящие звонки и СМС",
+              "uz": "Chiquvchi qo'ng'iroq va SMSlarni taqiqlash"
+            },
+            "desc": {
+              "ru": "Подкльчить услугу.",
+              "uz": "Chiquvchi qo'ng'iroq va SMSlarni taqiqlash xizmatini boshqarish."
+            },
+            "code": "*33*0000#",
+            "codeOff": "#33*0000#"
+          },
+          {
+            "title": {
+              "ru": "Переадресация",
+              "uz": "Pereadresatsiya"
+            },
+            "desc": {
+              "ru": "Для переадресации всех звонков на ваш номер, наберите следующий код: *21*+99899НОМЕР#.",
+              "uz": "Raqamingizga kelgan qo'ng'iroqlarni boshqa raqamga yo'naltirish xizmati. Buning uchun *21*+99899RAQAM# kodni tering."
+            },
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Услуга \"Для семьи\"",
+              "uz": "Oila uchun xizmati"
+            },
+            "desc": {
+              "ru": "При активации услуги все исходящие звонки внутри группы – 0 сум, включенный лимит минут не расходуется. Группой являются все номера, оформленные на один договор.",
+              "uz": "Oila uchun xizmatini yoqish."
+            },
+            "code": "*111*1*17*1*1#",
+            "codeOff": "*111*1*17*1*2#"
+          },
+          {
+            "title": {
+              "ru": "Запрет на перевод MB",
+              "uz": "MBlarni o'tkazishni taqiqlash"
+            },
+            "desc": {
+              "ru": "Не хотите чтобы с вашего счета по ошибке кто либо не перевел трафик? Поставьте запрет на даннуп услугу.",
+              "uz": "Sizdagi internet trafikni boshqa abobnentga o'tkazish xizmatini taqiqlash."
+            },
+            "code": "*111*1*26*1#"
+          },
+          {
+            "title": {
+              "ru": "Internet non-stop",
+              "uz": "Internet non-stop"
+            },
+            "desc": {
+              "ru": "Для управления услугой \"Internet non-stop\".",
+              "uz": "\"Internet non-stop\" xizmatini boshqarish menyusi."
+            },
+            "code": "*121#"
           }
         ]
       },
       {
         "title": {
-          "ru": "Новости",
-          "uz": "Yangiliklar"
+          "ru": "Платные услуги",
+          "uz": "Pullik xizmatlar"
         },
-        "plain": true,
         "items": [
           {
             "title": {
-              "ru": "Скидки на золотые номера",
-              "uz": "Oltin raqamlarga chegirma"
+              "ru": "Управление платными услугами",
+              "uz": "Pullik xizmatlarni boshqarish"
             },
             "desc": {
-              "ru": "<p>В период с 5 августа по 20 сентября 2020 года при подключении новой SIM-карты, у вас будет возможность приобрести красивый номер платной категории со значительной скидкой!</p>",
-              "uz": "<p>2020-yilning 5-avgustidan 20-sentyabriga qadar yangi SIM-kartani faollashtirsangiz, siz avtomat ravishda pullik toifadagi chiroyli raqamni katta chegirma asosida xarid qilish imkoniga ega bo‘lasiz!</p>"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  "contact": {
-    "sections": [
-      {
-        "items": [
-          {
-            "title": {
-              "ru": "Со всех номеров",
-              "uz": "Hamma raqamlardan"
+              "ru": "Наберите этот номер и управляйте всеми своими платными услугами в одном месте.",
+              "uz": "Bu kodni tering va barcha pullik xizmatlaringizni bir joyda boshqaring."
             },
-            "desc": {
-              "ru": "Служба поддержки доступна по короткому номеру <b>1099</b>. Номер доступен со всех операторов Узбекистана.",
-              "uz": "<b>1099</b> qisqa raqamiga hamma telefon raqamlaridan qo'ng'iroq qilsa bo'ladi."
-            },
-            "code": "1099",
-            "tell": true
+            "code": "*7777#"
           },
           {
             "title": {
-              "ru": "Веб сайт",
-              "uz": "Veb sayt"
+              "ru": "Услуга \"ZiyoNet\"",
+              "uz": "ZiyoNet xizmati"
             },
             "desc": {
-              "ru": "Дополнительную информацию можете получить на сайте <b>www.uztelecom.uz</b>.",
-              "uz": "<b>www.uztelecom.uz</b> internet saxifasida qo'shimcha ma'lumotlar olishingiz mumkin."
+              "ru": "Очень дешевый интернет для сайтов в сети ZiyoNet. Стоимость трафика: 8 сум/MB.",
+              "uz": "Ushbu xizmat sizga ZiyoNet tizimiga kirgan barcha saytlari uchun arzon internet: 8 so'm/MB."
             },
-            "codeDisplay": "www.uztelecom.uz"
+            "code": "*111*2*12*1#",
+            "codeOff": "*111*2*12*2#"
           },
           {
             "title": {
-              "ru": "Связаться с нами",
-              "uz": "Biz bilan bog'laning"
+              "ru": "Штрафы ПДД",
+              "uz": "YPX jarimalari"
             },
             "desc": {
-              "ru": "Официальный кол центр может быть нагружен, а у вас нет времени. Можете позвонить нам и мы постараемся ответить на ваши вопросы.",
-              "uz": "Rasmiy kol markaz band bo'lishi mumkin, sizning esa vaqtingiz chegaralangan. Bizga qo'ng'iroq qiling va biz savolingizga javob topishga harakat qilamiz."
+              "ru": "Информация о штрафах ПДД. Отправьте «номер автомабиля пробел серия и номер тех. паспорта» на короткий номер 8860. (Например: 01R999XY AAC5447770).",
+              "uz": "YPX qoidalarini bbuzganlik haqida ma'lumot. 8860 raqaamiga «avtomobibl davlat raqami bo'shliq tex.pasport seriyasi va raqami» (Masalan: 01R999XY AAC5447770)."
             },
-            "code": "+998 99 085-10-10",
-            "tel": true
+            "codeDisplay": true
           },
           {
             "title": {
-              "ru": "Наша поддержка",
-              "uz": "Bizning sahifalar"
+              "ru": "Викторина",
+              "uz": "Viktorina xizmati"
             },
             "desc": {
-              "ru": "Telegram: <a href='http://t.me/UztelecomHelpBot'>@UztelecomHelpBot</a>.<br>Telegram канал: <a href='http://t.me/ussdhelp'>@ussdhelp</a>.<br>Instagram: <a href='https://www.instagram.com/uztelecom.help/'>@uztelecom.help</a>.<br>Facebook: <a href='https://www.facebook.com/uztelecom.help'>fb.me/uztelecom.help</a>.",
-              "uz": "Telegram: <a href='http://t.me/UztelecomHelpBot'>@UztelecomHelpBot</a>.<br>Telegram kanal: <a href='http://t.me/ussdhelp'>@ussdhelp</a>.<br>Instagram: <a href='https://www.instagram.com/uztelecom.help/'>@uztelecom.help</a>.<br>Facebook: <a href='https://www.facebook.com/uztelecom.help'>fb.me/uztelecom.help</a>."
+              "ru": "Для активации услуги отправьте СМС на номер 8185. Для отказа от услуги отправьте слово 'STOP' на номер 8860.",
+              "uz": "Xizmatni faollashtirish uchun 8185 raqamiga SMS yuboring. Xizmaatni o'chirish uchun 8185 raqamiga 'STOP' so'zini yuboring"
             },
-            "code": "uztelecom.help@gmail.com"
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Словомания",
+              "uz": "Slovomaniya xizmati"
+            },
+            "desc": {
+              "ru": "Для активации услуги отправьте СМС на номер 8080. Для отказа от услуги отправьте слово 'STOP' на номер 8080.",
+              "uz": "Xizmatni faollashtirish uchun 8080 raqamiga SMS yubobring. Xizmatni o'chirish uchun 8080 raqamiga 'STOP' so'zini yuboring."
+            },
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Игры Uztelecom",
+              "uz": ""
+            },
+            "desc": {
+              "ru": "Голосовые и СМС игры от Uztelecom.",
+              "uz": "Uztelecomdan SMS va ovozli o'yinlar."
+            },
+            "code": "*950*1#",
+            "codeOff": "*950*2#"
+          },
+          {
+            "title": {
+              "ru": "Развлечения",
+              "uz": "Ko'ngilochar xizmatlar"
+            },
+            "desc": {
+              "ru": "Для активации услуги отправьте СМС на номер 4252. Для отказа от услуги отправьте слово 'STOP' на номер 4252.",
+              "uz": "Xizmatni faollashtirish uchun 4252 raqamiga SMS yubobring. Xizmatni o'chirish uchun 4252 raqamiga 'STOP' so'zini yuboring."
+            },
+            "codeDisplay": true
+          },
+          {
+            "title": {
+              "ru": "Отключить другие услуги",
+              "uz": "Pullik xizmatlarni o'chirish"
+            },
+            "desc": {
+              "ru": "Для отключения любой другой платной услуги, отправьте слово 'STOP' на короткий номер с которого пришло СМС сообщение.",
+              "uz": "Xizmatni o'chirish uchun, SMS kelgan raqamga 'STOP' so'zini yuboring."
+            },
+            "codeDisplay": true
           }
         ]
       }

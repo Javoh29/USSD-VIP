@@ -11,6 +11,10 @@ class NavigationProvider with ChangeNotifier {
     notifyListeners();
   }
 
+  void updateState() {
+    notifyListeners();
+  }
+
   PageName get currentName => _pageName;
 
 }

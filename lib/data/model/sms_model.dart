@@ -45,24 +45,29 @@ class SmsModel {
 class Items {
   Title _title;
   String _code;
+  int _period;
   int _price;
 
   Title get title => _title;
   String get code => _code;
+  int get period => _period;
   int get price => _price;
 
   Items({
-      Title title, 
-      String code, 
-      int price}){
+    Title title,
+    String code,
+    int period,
+    int price}){
     _title = title;
     _code = code;
+    _period = period;
     _price = price;
-}
+  }
 
   Items.fromJson(dynamic json) {
     _title = json["title"] != null ? Title.fromJson(json["title"]) : null;
     _code = json["code"];
+    _period = json["period"];
     _price = json["price"];
   }
 
@@ -72,6 +77,7 @@ class Items {
       map["title"] = _title.toJson();
     }
     map["code"] = _code;
+    map["period"] = _period;
     map["price"] = _price;
     return map;
   }

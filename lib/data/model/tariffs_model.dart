@@ -37,26 +37,26 @@ class TariffsModel {
 
 class Items {
   Title _title;
-  bool _code;
+  String _code;
   int _price;
-  int _minAll;
-  int _net;
-  int _sms;
+  var _minAll;
+  var _net;
+  var _sms;
 
   Title get title => _title;
-  bool get code => _code;
+  String get code => _code;
   int get price => _price;
-  int get minAll => _minAll;
-  int get net => _net;
-  int get sms => _sms;
+  get minAll => _minAll;
+  get net => _net;
+  get sms => _sms;
 
   Items({
-      Title title, 
-      bool code, 
+      Title title,
+    String code,
       int price, 
-      int minAll, 
-      int net, 
-      int sms}){
+      var minAll,
+      var net,
+      var sms}){
     _title = title;
     _code = code;
     _price = price;

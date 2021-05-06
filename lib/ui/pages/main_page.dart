@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 import 'package:ussd_vip/data/providers/navigation_provider.dart';
 import 'package:ussd_vip/ui/pages/home_page.dart';
@@ -26,12 +25,13 @@ class _MainPageState extends State<MainPage> {
   }
 
   @override
+  void initState() {
+    changeStatusBar(Color(0xfff9f9f9), false);
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(
-        SystemUiOverlayStyle(
-            statusBarColor: Color(0xfff9f9f9),
-            systemNavigationBarIconBrightness: Brightness.dark,
-            statusBarIconBrightness: Brightness.dark));
     return Consumer<NavigationProvider>(
       builder: (context, model, child) {
         return Scaffold(

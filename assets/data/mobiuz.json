@@ -1,559 +1,234 @@
 {
   "ussd": {
-    "sections": [
-      {
-        "title": {
-          "ru": "USSD Коды",
-          "uz": "USSD Kodlar"
-        },
-        "items": [
-          {
-            "title": {
-              "ru": "Проверка баланса",
-              "uz": "Balans tekshirish"
-            },
-            "desc": {
-              "ru": "Проверка баланса на вашем счету.",
-              "uz": "Xisobingizdagi mablag'ni tekshiring."
-            },
-            "code": "*100#"
-          },
-          {
-            "title": {
-              "ru": "Остаток трафика",
-              "uz": "Trafik qoldig'i"
-            },
-            "desc": {
-              "ru": "Проверка остатка трафика на вашем счету.",
-              "uz": "Trafik qoldig'ini tekshirish."
-            },
-            "code": "*102#"
-          },
-          {
-            "title": {
-              "ru": "Остаток бонусных MB",
-              "uz": "Bonus internet qoldig'i"
-            },
-            "desc": {
-              "ru": "Проверить остаток бонусных мегабайтов.",
-              "uz": "Bonusli internet to'plamlarni tekshirish."
-            },
-            "code": "*102*0#"
-          },
-          {
-            "title": {
-              "ru": "Остаток минут",
-              "uz": "Daqiqalar qoldig'i"
-            },
-            "desc": {
-              "ru": "Используя этот код, вы можете проверить остаток купленных либо бонусных минут.",
-              "uz": "Daqiqalar to'plami sotib olgan bo'lsangiz, bu kodni ishlatib, o'z xisobingizda qolgan daqiqalarni tekshirishingiz mumkin."
-            },
-            "code": "*103#"
-          },
-          {
-            "title": {
-              "ru": "Доступные SMS",
-              "uz": "SMS qoldig'i"
-            },
-            "desc": {
-              "ru": "Используя этот код, вы можете проверить остаток купленных либо бонусных СМС.",
-              "uz": "SMS to'plami sotib olgan bo'lsangiz, bu kodni ishlatib, o'z xisobingizda qolgan SMSlar sonini tekshirishingiz mumkin."
-            },
-            "code": "*104#"
-          },
-          {
-            "title": {
-              "ru": "Остаток Ночной Drive",
-              "uz": "Tungi Drive qoldig'i"
-            },
-            "desc": {
-              "ru": "Остаток мегабайтов пакета Ночной Drive.",
-              "uz": "Tungi Drive xizmati MBlar qoldigini tekshirish kodi."
-            },
-            "code": "*200#"
-          },
-          {
-            "title": {
-              "ru": "Остаток ночного интернета",
-              "uz": "Tungi Internet qoldig'i"
-            },
-            "desc": {
-              "ru": "Проверить остаток мегабайтов купленных вами ночных пакетов интернета.",
-              "uz": "Tungi internet to'plamlari xizmati doirasidagi MBlar qoldig'ini tekshirish."
-            },
-            "code": "*203#"
-          },
-          {
-            "title": {
-              "ru": "Остаток дневного интернета",
-              "uz": "Kunlik Internet qoldig'i"
-            },
-            "desc": {
-              "ru": "Проверить остаток мегабайтов купленных вами дневных пакетов интернета.",
-              "uz": "Tungi internet to'plamlari xizmati doirasidagi MBlar qoldigini tekshirish."
-            },
-            "code": "*204#"
-          },
-          {
-            "title": {
-              "ru": "Мои сервисы",
-              "uz": "Mening Xizmatlarim"
-            },
-            "desc": {
-              "ru": "Используйте этот код для проверки активированных вами сервисов (платных и бесплатных).",
-              "uz": "Faollashtirilgan xizmatlarni tekshirish uchun ushbu koddan foydalaning."
-            },
-            "code": "*140#"
-          },
-          {
-            "title": {
-              "ru": "Мой номер",
-              "uz": "Mening raqamim"
-            },
-            "desc": {
-              "ru": "Узнайте номер данной SIM карты.",
-              "uz": "O'z raqamingizni aniqlash uchun ushbu koddan foydalanishingiz mumkin."
-            },
-            "code": "*150#"
-          },
-          {
-            "title": {
-              "ru": "Мои номера",
-              "uz": "Mening raqamlarim"
-            },
-            "desc": {
-              "ru": "Используя этот сервис, вы можете получить все номера зарегистрированные на ваш паспорт.",
-              "uz": "Bu xizmatdan foydalanib, sizning nomingizga ro'yxatdan o'tgan raqamlarni aniqlashingiz mumkin."
-            },
-            "code": "*151#"
-          },
-          {
-            "title": {
-              "ru": "Услуга \"Super O\"",
-              "uz": "\"Super 0\" xizmati"
-            },
-            "desc": {
-              "ru": "Безлимитное общение внутри сети.Цена подключиения: 10,000 сум.Для абонентов тарифов Mobi 50 и выше бесплатно.",
-              "uz": "Tarmoq ichida cheksiz muloqot. Mobi 50 va yuqori tarif egalari uchun tekin. Qolganlarga 10,000 so'm."
-            },
-            "code": "*166#"
-          },
-          {
-            "title": {
-              "ru": "Обещанный платеж",
-              "uz": "Qarz olish"
-            },
-            "desc": {
-              "ru": "Нет средств? Не проблема! Возмите в долг и оставайтесь на связи.",
-              "uz": "Xisobingizda mablag' qolmaganida, qarz oling va aloqada qoling."
-            },
-            "code": "*111*32#"
-          },
-          {
-            "title": {
-              "ru": "Остаток долга",
-              "uz": "Qarz qoldigi"
-            },
-            "desc": {
-              "ru": "Проверка остатка \"Обещанного платежа\".",
-              "uz": "Va'da qilingan to'lov xizmati qoldig'ini tekshirish."
-            },
-            "code": "*111*320#"
-          },
-          {
-            "title": {
-              "ru": "Последний платеж",
-              "uz": "Oxirgi to'lov"
-            },
-            "desc": {
-              "ru": "Информация о последнем вашем платеже.",
-              "uz": "Oxirgi qilingan to'lovingiz haqida ma'lumot."
-            },
-            "code": "*111*015#"
-          },
-          {
-            "title": {
-              "ru": "Мои платежи",
-              "uz": "Mening xarajatlarim"
-            },
-            "desc": null,
-            "code": "*111*025#"
-          },
-          {
-            "title": {
-              "ru": "Запрет перевода средств",
-              "uz": "Pul o'tkazishni taqiqlash"
-            },
-            "desc": null,
-            "code": "*111*0151#"
-          },
-          {
-            "title": {
-              "ru": "Конференцсвязь",
-              "uz": "Konferens aloqa"
-            },
-            "desc": {
-              "ru": "Позволяет устраивать конференц связь до 6 человек.",
-              "uz": "Konfеrеnsaloqa rеjimi bir vaqtda bir necha suhbatdoshlar o‘rtasida suhbat tashkil etish imkonini beradi."
-            },
-            "code": "*111*0061#",
-            "codeOff": "*111*0060#"
-          },
-          {
-            "title": {
-              "ru": "Запретить рекламу",
-              "uz": "Reklamani taqiqlash"
-            },
-            "desc": null,
-            "code": "*111*027*1#"
-          },
-          {
-            "title": {
-              "ru": "Определить IMEI",
-              "uz": "IMEI aniqlash"
-            },
-            "desc": null,
-            "code": "*#06#"
-          }
-        ]
+    "sections": {
+      "title": {
+        "ru": "USSD Коды",
+        "uz": "USSD Kodlar"
       },
-      {
-        "title": {
-          "ru": "Услуги",
-          "uz": "Xizmatlar"
+      "items": [
+        {
+          "title": {
+            "ru": "Проверка баланса",
+            "uz": "Balans tekshirish"
+          },
+          "desc": {
+            "ru": "Проверка баланса на вашем счету.",
+            "uz": "Xisobingizdagi mablag'ni tekshiring."
+          },
+          "code": "*100#"
         },
-        "items": [
-          {
-            "title": {
-              "ru": "4G LTE",
-              "uz": "4G LTE"
-            },
-            "desc": {
-              "ru": "Проверка статуса: *222#.",
-              "uz": "Xolatni tekshirish: *222#."
-            },
-            "code": "*222*1#",
-            "codeOff": "*222*0#"
+        {
+          "title": {
+            "ru": "Остаток трафика",
+            "uz": "Trafik qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Мобильный интернет",
-              "uz": "Mobil internet"
-            },
-            "desc": {
-              "ru": "Проверка статуса: *111*001#.",
-              "uz": "Xolatni tekshirish: *111*001#."
-            },
-            "code": "*111*0011#",
-            "codeOff": "*111*0010#"
+          "desc": {
+            "ru": "Проверка остатка трафика на вашем счету.",
+            "uz": "Trafik qoldig'ini tekshirish."
           },
-          {
-            "title": {
-              "ru": "Вам звонили",
-              "uz": "Sizga qo'ng'iroq qilishdi"
-            },
-            "desc": {
-              "ru": "Первый месяц: 0 сум.Со второго месяца: 84,21 сум в день.",
-              "uz": "Birinchi oy: 0 so'm.Ikkinchi oy (kuniga): 84,21 so'm."
-            },
-            "code": "*111*0131#",
-            "codeOff": "*111*0130#"
-          },
-          {
-            "title": {
-              "ru": "Услуга \"Ожидание\"",
-              "uz": "\"Ojidanie\" xizmati"
-            },
-            "desc": {
-              "ru": "Возможность получать паралельные звонки. Второй звонящий номер будет в ожидании.",
-              "uz": "Qo'ng'iroq vaqtida boshqa yo'nalishdan qo'ng'iroqlar qabul qilish."
-            },
-            "code": "*43#",
-            "codeOff": "#43#"
-          },
-          {
-            "title": {
-              "ru": "Запретить выходящие",
-              "uz": "Chiquvga taqiq"
-            },
-            "desc": {
-              "ru": "Установить запрет на все исходящие звонки.",
-              "uz": "Chiquvchi qo'ng'iroqlarni taqiqlash."
-            },
-            "code": "*33*0000#",
-            "codeOff": "#33*0000#"
-          },
-          {
-            "title": {
-              "ru": "Запретить входящие",
-              "uz": "Kiruvchilarga taqiq"
-            },
-            "desc": {
-              "ru": "Установить запрет на все входящие звонки и СМС.",
-              "uz": "Kiruvchi qo'ng'iroq va SMSlarga taqiq."
-            },
-            "code": "*35*0000#",
-            "codeOff": "#35*0000#"
-          },
-          {
-            "title": {
-              "ru": "Услуга \"Good OK\"",
-              "uz": "\"Good OK\" xizmati"
-            },
-            "desc": {
-              "ru": "Установите музыку вместо гудка.",
-              "uz": "Gudok o'rniga musiqa qo'yish xizmati."
-            },
-            "code": "*111*0141#",
-            "codeOff": "*111*0140#"
-          },
-          {
-            "title": {
-              "ru": "Вне зоны",
-              "uz": "Xizmat doirasidan tashqarida"
-            },
-            "desc": {
-              "ru": "Подключить: *21*99897XXXXXXX#.",
-              "uz": "Ulanish uchun: *21*99897XXXXXXX# tering."
-            },
-            "code": "",
-            "codeOff": "##21#"
-          },
-          {
-            "title": {
-              "ru": "Перевод средств",
-              "uz": "Pul o'tkazish"
-            },
-            "desc": {
-              "ru": "*112*99897XXXXXXX*СУММА# вызов.",
-              "uz": "*112*99897XXXXXXX*SUMMA# chaqiruv. Pul o'tkazishlarni taqiqlash: *111*0151#."
-            },
-            "codeOff": "*111*0151#"
-          },
-          {
-            "title": {
-              "ru": "Однократный \"АнтиАОН\"",
-              "uz": "1 martalik \"AntiAON\""
-            },
-            "desc": {
-              "ru": "*99897XXXXXXX вызов.",
-              "uz": "*99897XXXXXXX chaqiruv."
-            },
-            "codeDisplay": " "
-          },
-          {
-            "title": {
-              "ru": "АнтиАОН",
-              "uz": "AntiAON"
-            },
-            "desc": {
-              "ru": "Увидитеь звонящий вам сктрытый номер.",
-              "uz": "Raqamini yashirgan (skritiy nomer) qo'ng'iroqlarni raqamini ko'rish."
-            },
-            "code": "*111*0101#",
-            "codeOff": "*111*0100#"
-          },
-          {
-            "title": {
-              "ru": "Позвоните мне (Узб)",
-              "uz": "Menga qo'ng'iroq qil (Uzb)"
-            },
-            "desc": {
-              "ru": "Наберите номер в виде: *110*9989_______#.",
-              "uz": "Telefon raqamni quyidagicha tering *110*9989********#.<br><br>Masalan: *110*998931821234#"
-            },
-            "code": ""
-          },
-          {
-            "title": {
-              "ru": "Позвоните мне (Межн.)",
-              "uz": "Menga qo'ng'iroq qil (chet el)"
-            },
-            "desc": {
-              "ru": "Наберите номер в виде: *111*779989********#.",
-              "uz": "Telefon raqamni quyidagicha tering *111*79989********#.<br><br>Masalan: *111*7998931821234#"
-            },
-            "code": ""
-          },
-          {
-            "title": {
-              "ru": "Super 0",
-              "uz": "Super 0"
-            },
-            "desc": {
-              "ru": "<b>Бесплатное общение внутри сети.</b>Цена подключиения: 4210 сум.Для абонентов тарифов Mobi 50 и выше бесплатно.",
-              "uz": "<b>Tarmoq ichida tekin cheksiz muloqot.</b><br>Bu xizmat barcha Mobiuz abonentlari bilan checksiz muloqat qilish imkoniyatini beradi.<br>Mobi 50 va yuqori bo'lgan tarif egalari uchun bepul. Qolganlarga 4210 so'm."
-            },
-            "code": "*166#"
-          },
-          {
-            "title": {
-              "ru": "Конференсвязь",
-              "uz": "Konferensaloqa"
-            },
-            "desc": {
-              "ru": "Позволяет устраивать конференц связь до 6 человек.",
-              "uz": "Konfеrеnsaloqa rеjimi bir vaqtda bir necha suhbatdoshlar o‘rtasida suhbat tashkil etish imkonini beradi."
-            },
-            "code": "*111*0061#",
-            "codeOff": "*111*0060#"
-          },
-          {
-            "title": {
-              "ru": "Бронирование номера",
-              "uz": "Raqamni saqlab turish"
-            },
-            "desc": {
-              "ru": "Бронь номера сохраняется 90 дней.",
-              "uz": "Raqam 90 kungacha saqlanib turiladi."
-            },
-            "code": "*111*0161#"
-          }
-        ]
-      },
-      {
-        "title": {
-          "ru": "Платные услуги",
-          "uz": "Pullik xizmatlar"
+          "code": "*102#"
         },
-        "items": [
-          {
-            "title": {
-              "ru": "Отключить платные услуги",
-              "uz": "Pullik xizmatlarni o'chirish"
-            },
-            "desc": {
-              "ru": "Для отказа от дополнительных услуг, отправьте слово STOP на короткий номер 345.",
-              "uz": "Qo'shimcha xizmatlarni o'chirish uchun 345 raqamiga 'STOP' so'zini yuboring."
-            },
-            "codeDisplay": " "
+        {
+          "title": {
+            "ru": "Остаток бонусных MB",
+            "uz": "Bonus internet qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Центр обращений Mobiuz",
-              "uz": "Mobiuz muloqot xizmati"
-            },
-            "desc": {
-              "ru": "",
-              "uz": ""
-            },
-            "code": "*460#",
-            "codeOff": "*460*0#"
+          "desc": {
+            "ru": "Проверить остаток бонусных мегабайтов.",
+            "uz": "Bonusli internet to'plamlarni tekshirish."
           },
-          {
-            "title": {
-              "ru": "Погода",
-              "uz": "Ob-xavo"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер <b>345</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>345</b> qisqa raqamiga 2 sonini SMS qilib yuboring."
-            }
+          "code": "*102*0#"
+        },
+        {
+          "title": {
+            "ru": "Остаток минут",
+            "uz": "Daqiqalar qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Гороскоп",
-              "uz": "Bashoratlar"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер <b>347</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>347</b> qisqa raqamiga 2 sonini SMS qilib yuboring."
-            }
+          "desc": {
+            "ru": "Используя этот код, вы можете проверить остаток купленных либо бонусных минут.",
+            "uz": "Daqiqalar to'plami sotib olgan bo'lsangiz, bu kodni ishlatib, o'z xisobingizda qolgan daqiqalarni tekshirishingiz mumkin."
           },
-          {
-            "title": {
-              "ru": "Анекдоты",
-              "uz": "Latifalar"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер <b>359</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>359</b> qisqa raqamiga 2 sonini SMS qilib yuboring."
-            }
+          "code": "*103#"
+        },
+        {
+          "title": {
+            "ru": "Доступные SMS",
+            "uz": "SMS qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Курс валют",
-              "uz": "Balyutalar kursi"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 04 на кароткий номер <b>359</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>359</b> qisqa raqamiga 04 sonini SMS qilib yuboring."
-            }
+          "desc": {
+            "ru": "Используя этот код, вы можете проверить остаток купленных либо бонусных СМС.",
+            "uz": "SMS to'plami sotib olgan bo'lsangiz, bu kodni ishlatib, o'z xisobingizda qolgan SMSlar sonini tekshirishingiz mumkin."
           },
-          {
-            "title": {
-              "ru": "Диета и Рецепты",
-              "uz": "Parxezlar"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 05 на кароткий номер <b>359</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>359</b> qisqa raqamiga 05 sonini SMS qilib yuboring."
-            }
+          "code": "*104#"
+        },
+        {
+          "title": {
+            "ru": "Остаток Ночной Drive",
+            "uz": "Tungi Drive qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Советы мудрых",
-              "uz": "Donishmand maslaxatlari"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 07 на кароткий номер <b>359</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>359</b> qisqa raqamiga 07 sonini SMS qilib yuboring."
-            }
+          "desc": {
+            "ru": "Остаток мегабайтов пакета Ночной Drive.",
+            "uz": "Tungi Drive xizmati MBlar qoldigini tekshirish kodi."
           },
-          {
-            "title": {
-              "ru": "Настроение",
-              "uz": "Kayfiyat"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 06 на кароткий номер <b>359</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>359</b> qisqa raqamiga 06 sonini SMS qilib yuboring."
-            }
+          "code": "*200#"
+        },
+        {
+          "title": {
+            "ru": "Остаток ночного интернета",
+            "uz": "Tungi Internet qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Музыка",
-              "uz": "Musiqa"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 09 на кароткий номер <b>655</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>655</b> qisqa raqamiga 09 sonini SMS qilib yuboring."
-            }
+          "desc": {
+            "ru": "Проверить остаток мегабайтов купленных вами ночных пакетов интернета.",
+            "uz": "Tungi internet to'plamlari xizmati doirasidagi MBlar qoldig'ini tekshirish."
           },
-          {
-            "title": {
-              "ru": "Игры",
-              "uz": "O'yinlar"
-            },
-            "desc": {
-              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 010 на кароткий номер <b>655</b>.",
-              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun <b>655</b> qisqa raqamiga 010 sonini SMS qilib yuboring."
-            }
+          "code": "*203#"
+        },
+        {
+          "title": {
+            "ru": "Остаток дневного интернета",
+            "uz": "Kunlik Internet qoldig'i"
           },
-          {
-            "title": {
-              "ru": "Видео",
-              "uz": "Video"
-            },
-            "desc": {
-              "ru": "Цена: 3150 сум один SMS.Отключение: отправьте СМС с цыфрой 011 на кароткий номер <b>655</b>.",
-              "uz": "Xar SMS narxi: 3150 so'm.Xizmatni o'chirish uchun <b>655</b> qisqa raqamiga 011 sonini SMS qilib yuboring."
-            }
+          "desc": {
+            "ru": "Проверить остаток мегабайтов купленных вами дневных пакетов интернета.",
+            "uz": "Tungi internet to'plamlari xizmati doirasidagi MBlar qoldigini tekshirish."
           },
-          {
-            "title": {
-              "ru": "Фото",
-              "uz": "Suratlar"
-            },
-            "desc": {
-              "ru": "Цена: 3150 сум один SMS.Недельная услуга.",
-              "uz": "Xar SMS narxi: 3150 so'm.Xizmat bir martallik."
-            }
-          }
-        ]
-      }
-    ]
+          "code": "*204#"
+        },
+        {
+          "title": {
+            "ru": "Мои сервисы",
+            "uz": "Mening Xizmatlarim"
+          },
+          "desc": {
+            "ru": "Используйте этот код для проверки активированных вами сервисов (платных и бесплатных).",
+            "uz": "Faollashtirilgan xizmatlarni tekshirish uchun ushbu koddan foydalaning."
+          },
+          "code": "*140#"
+        },
+        {
+          "title": {
+            "ru": "Мой номер",
+            "uz": "Mening raqamim"
+          },
+          "desc": {
+            "ru": "Узнайте номер данной SIM карты.",
+            "uz": "O'z raqamingizni aniqlash uchun ushbu koddan foydalanishingiz mumkin."
+          },
+          "code": "*150#"
+        },
+        {
+          "title": {
+            "ru": "Мои номера",
+            "uz": "Mening raqamlarim"
+          },
+          "desc": {
+            "ru": "Используя этот сервис, вы можете получить все номера зарегистрированные на ваш паспорт.",
+            "uz": "Bu xizmatdan foydalanib, sizning nomingizga ro'yxatdan o'tgan raqamlarni aniqlashingiz mumkin."
+          },
+          "code": "*151#"
+        },
+        {
+          "title": {
+            "ru": "Услуга \"Super O\"",
+            "uz": "\"Super 0\" xizmati"
+          },
+          "desc": {
+            "ru": "Безлимитное общение внутри сети.Цена подключиения: 10,000 сум.Для абонентов тарифов Mobi 50 и выше бесплатно.",
+            "uz": "Tarmoq ichida cheksiz muloqot. Mobi 50 va yuqori tarif egalari uchun tekin. Qolganlarga 10,000 so'm."
+          },
+          "code": "*166#"
+        },
+        {
+          "title": {
+            "ru": "Обещанный платеж",
+            "uz": "Qarz olish"
+          },
+          "desc": {
+            "ru": "Нет средств? Не проблема! Возмите в долг и оставайтесь на связи.",
+            "uz": "Xisobingizda mablag' qolmaganida, qarz oling va aloqada qoling."
+          },
+          "code": "*111*32#"
+        },
+        {
+          "title": {
+            "ru": "Остаток долга",
+            "uz": "Qarz qoldigi"
+          },
+          "desc": {
+            "ru": "Проверка остатка \"Обещанного платежа\".",
+            "uz": "Va'da qilingan to'lov xizmati qoldig'ini tekshirish."
+          },
+          "code": "*111*320#"
+        },
+        {
+          "title": {
+            "ru": "Последний платеж",
+            "uz": "Oxirgi to'lov"
+          },
+          "desc": {
+            "ru": "Информация о последнем вашем платеже.",
+            "uz": "Oxirgi qilingan to'lovingiz haqida ma'lumot."
+          },
+          "code": "*111*015#"
+        },
+        {
+          "title": {
+            "ru": "Мои платежи",
+            "uz": "Mening xarajatlarim"
+          },
+          "desc": {
+            "ru": "",
+            "uz": ""
+          },
+          "code": "*111*025#"
+        },
+        {
+          "title": {
+            "ru": "Запрет перевода средств",
+            "uz": "Pul o'tkazishni taqiqlash"
+          },
+          "desc": {
+            "ru": "",
+            "uz": ""
+          },
+          "code": "*111*0151#"
+        },
+        {
+          "title": {
+            "ru": "Конференцсвязь",
+            "uz": "Konferens aloqa"
+          },
+          "desc": {
+            "ru": "Позволяет устраивать конференц связь до 6 человек.",
+            "uz": "Konfеrеnsaloqa rеjimi bir vaqtda bir necha suhbatdoshlar o‘rtasida suhbat tashkil etish imkonini beradi."
+          },
+          "code": "*111*0061#",
+          "codeOff": "*111*0060#"
+        },
+        {
+          "title": {
+            "ru": "Запретить рекламу",
+            "uz": "Reklamani taqiqlash"
+          },
+          "desc": {
+            "ru": "",
+            "uz": ""
+          },
+          "code": "*111*027*1#"
+        },
+        {
+          "title": {
+            "ru": "Определить IMEI",
+            "uz": "IMEI aniqlash"
+          },
+          "desc": {
+            "ru": "",
+            "uz": ""
+          },
+          "code": "*#06#"
+        }
+      ]
+    }
   },
   "internet": {
     "sections": [
@@ -953,28 +628,6 @@
         "items": [
           {
             "title": {
-              "ru": "Yengil",
-              "uz": "Yengil"
-            },
-            "code": false,
-            "price": 8000,
-            "minAll": 80,
-            "net": 80,
-            "sms": 80
-          },
-          {
-            "title": {
-              "ru": "Omad Plus",
-              "uz": "Omad Plus"
-            },
-            "code": false,
-            "price": 12000,
-            "minAll": 400,
-            "net": 500,
-            "sms": 400
-          },
-          {
-            "title": {
               "ru": "Chilla Lite",
               "uz": "Chilla Lite"
             },
@@ -1241,126 +894,6 @@
       },
       {
         "title": {
-          "ru": "Льготные",
-          "uz": "Imtiyozli"
-        },
-        "items": [
-          {
-            "title": {
-              "ru": "Maktab",
-              "uz": "Maktab"
-            },
-            "price": 20000,
-            "minAll": 500,
-            "net": 3000,
-            "sms": 500
-          },
-          {
-            "title": {
-              "ru": "Talaba",
-              "uz": "Talaba"
-            },
-            "price": 15000,
-            "minAll": 500,
-            "net": 1000,
-            "net3": 1000,
-            "sms": 500
-          },
-          {
-            "title": {
-              "ru": "Talaba+",
-              "uz": "Talaba+"
-            },
-            "price": 50000,
-            "minAll": 1000,
-            "net": 10000,
-            "net3": 10000,
-            "sms": 1000
-          },
-          {
-            "title": {
-              "ru": "Fidokor",
-              "uz": "Fidokor"
-            },
-            "price": 15000,
-            "minAll": 2000,
-            "net": 2000,
-            "sms": 2000
-          },
-          {
-            "title": {
-              "ru": "Fidokor+",
-              "uz": "Fidokor+"
-            },
-            "price": 30000,
-            "minAll": 3000,
-            "net": 5000,
-            "sms": 3000
-          },
-          {
-            "title": {
-              "ru": "Tourist SIM",
-              "uz": "Tourist SIM"
-            },
-            "price": 42000,
-            "minAll": 400,
-            "net": 8000,
-            "sms": 400
-          },
-          {
-            "title": {
-              "ru": "Tourist SIM Lite",
-              "uz": "Tourist SIM Lite"
-            },
-            "price": 21000,
-            "minAll": 200,
-            "net": 3000,
-            "sms": 200
-          },
-          {
-            "title": {
-              "ru": "Преподаватель 1",
-              "uz": "O'qituvchi 1"
-            },
-            "price": 16000,
-            "minAll": 2000,
-            "net": 2000,
-            "sms": 100
-          },
-          {
-            "title": {
-              "ru": "Преподаватель 2",
-              "uz": "O'qituvchi 2"
-            },
-            "price": 30000,
-            "minAll": 2000,
-            "net": 5000,
-            "sms": 100
-          },
-          {
-            "title": {
-              "ru": "Вместе с Mobiuz",
-              "uz": "Mobiuz Bilan Birga"
-            },
-            "price": 8420.7,
-            "minAll": 300,
-            "net": 300,
-            "sms": 300
-          },
-          {
-            "title": {
-              "ru": "Ветеран",
-              "uz": "Fahriy"
-            },
-            "price": 0,
-            "minAll": 200,
-            "net": 0,
-            "sms": 0
-          }
-        ]
-      },
-      {
-        "title": {
           "ru": "Годовые",
           "uz": "Yillik"
         },
@@ -1533,7 +1066,8 @@
               "uz": "SMS 100"
             },
             "code": "*171*018*1*010100180*1#",
-            "price": 4500
+            "price": 4500,
+            "period": 30
           },
           {
             "title": {
@@ -1541,7 +1075,8 @@
               "uz": "SMS 300"
             },
             "code": "*171*018*2*010100180*1#",
-            "price": 10500
+            "price": 10500,
+            "period": 30
           }
         ]
       },
@@ -1565,42 +1100,339 @@
       }
     ]
   },
-  "campaigns": {
+  "services": {
     "sections": [
       {
         "title": {
-          "ru": "Акции",
-          "uz": "Aktsiyalar"
+          "ru": "Услуги",
+          "uz": "Xizmatlar"
         },
         "items": [
           {
             "title": {
-              "ru": "«Счастливые миллионы с Mobiuz»",
-              "uz": "«Mobiuz bilan baxtli millionlar» aksiyasi"
+              "ru": "4G LTE",
+              "uz": "4G LTE"
             },
             "desc": {
-              "ru": "Абонент - пользователь тарифов для физических лиц c предоплатной системой расчетов (кроме тарифов для туристов), купивший пакет «5555 MB».",
-              "uz": "Abonent - «5555 MB» to‘plamini xarid qilgan, jismoniy shaxslar uchun mo‘ljallangan (turistlar uchun mo‘ljallangan tariflardan tashqari) oldindan to‘lov qilish hisob-kitob tizimli tarif rejalarining foydalanuvchisi."
+              "ru": "Проверка статуса: *222#.",
+              "uz": "Xolatni tekshirish: *222#."
+            },
+            "code": "*222*1#",
+            "codeOff": "*222*0#"
+          },
+          {
+            "title": {
+              "ru": "Мобильный интернет",
+              "uz": "Mobil internet"
+            },
+            "desc": {
+              "ru": "Проверка статуса: *111*001#.",
+              "uz": "Xolatni tekshirish: *111*001#."
+            },
+            "code": "*111*0011#",
+            "codeOff": "*111*0010#"
+          },
+          {
+            "title": {
+              "ru": "Вам звонили",
+              "uz": "Sizga qo'ng'iroq qilishdi"
+            },
+            "desc": {
+              "ru": "Первый месяц: 0 сум.Со второго месяца: 84,21 сум в день.",
+              "uz": "Birinchi oy: 0 so'm.Ikkinchi oy (kuniga): 84,21 so'm."
+            },
+            "code": "*111*0131#",
+            "codeOff": "*111*0130#"
+          },
+          {
+            "title": {
+              "ru": "Услуга \"Ожидание\"",
+              "uz": "\"Ojidanie\" xizmati"
+            },
+            "desc": {
+              "ru": "Возможность получать паралельные звонки. Второй звонящий номер будет в ожидании.",
+              "uz": "Qo'ng'iroq vaqtida boshqa yo'nalishdan qo'ng'iroqlar qabul qilish."
+            },
+            "code": "*43#",
+            "codeOff": "#43#"
+          },
+          {
+            "title": {
+              "ru": "Запретить выходящие",
+              "uz": "Chiquvga taqiq"
+            },
+            "desc": {
+              "ru": "Установить запрет на все исходящие звонки.",
+              "uz": "Chiquvchi qo'ng'iroqlarni taqiqlash."
+            },
+            "code": "*33*0000#",
+            "codeOff": "#33*0000#"
+          },
+          {
+            "title": {
+              "ru": "Запретить входящие",
+              "uz": "Kiruvchilarga taqiq"
+            },
+            "desc": {
+              "ru": "Установить запрет на все входящие звонки и СМС.",
+              "uz": "Kiruvchi qo'ng'iroq va SMSlarga taqiq."
+            },
+            "code": "*35*0000#",
+            "codeOff": "#35*0000#"
+          },
+          {
+            "title": {
+              "ru": "Услуга \"Good OK\"",
+              "uz": "\"Good OK\" xizmati"
+            },
+            "desc": {
+              "ru": "Установите музыку вместо гудка.",
+              "uz": "Gudok o'rniga musiqa qo'yish xizmati."
+            },
+            "code": "*111*0141#",
+            "codeOff": "*111*0140#"
+          },
+          {
+            "title": {
+              "ru": "Вне зоны",
+              "uz": "Xizmat doirasidan tashqarida"
+            },
+            "desc": {
+              "ru": "Подключить: *21*99897XXXXXXX#.",
+              "uz": "Ulanish uchun: *21*99897XXXXXXX# tering."
+            },
+            "code": "",
+            "codeOff": "##21#"
+          },
+          {
+            "title": {
+              "ru": "Перевод средств",
+              "uz": "Pul o'tkazish"
+            },
+            "desc": {
+              "ru": "*112*99897XXXXXXX*СУММА# вызов.",
+              "uz": "*112*99897XXXXXXX*SUMMA# chaqiruv. Pul o'tkazishlarni taqiqlash: *111*0151#."
+            },
+            "codeOff": "*111*0151#"
+          },
+          {
+            "title": {
+              "ru": "Однократный \"АнтиАОН\"",
+              "uz": "1 martalik \"AntiAON\""
+            },
+            "desc": {
+              "ru": "*99897XXXXXXX вызов.",
+              "uz": "*99897XXXXXXX chaqiruv."
+            },
+            "codeDisplay": " "
+          },
+          {
+            "title": {
+              "ru": "АнтиАОН",
+              "uz": "AntiAON"
+            },
+            "desc": {
+              "ru": "Увидитеь звонящий вам сктрытый номер.",
+              "uz": "Raqamini yashirgan (skritiy nomer) qo'ng'iroqlarni raqamini ko'rish."
+            },
+            "code": "*111*0101#",
+            "codeOff": "*111*0100#"
+          },
+          {
+            "title": {
+              "ru": "Позвоните мне (Узб)",
+              "uz": "Menga qo'ng'iroq qil (Uzb)"
+            },
+            "desc": {
+              "ru": "Наберите номер в виде: *110*9989_______#.",
+              "uz": "Telefon raqamni quyidagicha tering *110*9989********#.Masalan: *110*998931821234#"
+            },
+            "code": ""
+          },
+          {
+            "title": {
+              "ru": "Позвоните мне (Межн.)",
+              "uz": "Menga qo'ng'iroq qil (chet el)"
+            },
+            "desc": {
+              "ru": "Наберите номер в виде: *111*779989********#.",
+              "uz": "Telefon raqamni quyidagicha tering *111*79989********#.Masalan: *111*7998931821234#"
+            },
+            "code": ""
+          },
+          {
+            "title": {
+              "ru": "Super 0",
+              "uz": "Super 0"
+            },
+            "desc": {
+              "ru": "Бесплатное общение внутри сети.Цена подключиения: 4210 сум.Для абонентов тарифов Mobi 50 и выше бесплатно.",
+              "uz": "Tarmoq ichida tekin cheksiz muloqot.Bu xizmat barcha Mobiuz abonentlari bilan checksiz muloqat qilish imkoniyatini beradi.Mobi 50 va yuqori bo'lgan tarif egalari uchun bepul. Qolganlarga 4210 so'm."
+            },
+            "code": "*166#"
+          },
+          {
+            "title": {
+              "ru": "Конференсвязь",
+              "uz": "Konferensaloqa"
+            },
+            "desc": {
+              "ru": "Позволяет устраивать конференц связь до 6 человек.",
+              "uz": "Konfеrеnsaloqa rеjimi bir vaqtda bir necha suhbatdoshlar o‘rtasida suhbat tashkil etish imkonini beradi."
+            },
+            "code": "*111*0061#",
+            "codeOff": "*111*0060#"
+          },
+          {
+            "title": {
+              "ru": "Бронирование номера",
+              "uz": "Raqamni saqlab turish"
+            },
+            "desc": {
+              "ru": "Бронь номера сохраняется 90 дней.",
+              "uz": "Raqam 90 kungacha saqlanib turiladi."
+            },
+            "code": "*111*0161#"
+          }
+        ]
+      },
+      {
+        "title": {
+          "ru": "Платные услуги",
+          "uz": "Pullik xizmatlar"
+        },
+        "items": [
+          {
+            "title": {
+              "ru": "Отключить платные услуги",
+              "uz": "Pullik xizmatlarni o'chirish"
+            },
+            "desc": {
+              "ru": "Для отказа от дополнительных услуг, отправьте слово STOP на короткий номер 345.",
+              "uz": "Qo'shimcha xizmatlarni o'chirish uchun 345 raqamiga 'STOP' so'zini yuboring."
+            },
+            "codeDisplay": " "
+          },
+          {
+            "title": {
+              "ru": "Центр обращений Mobiuz",
+              "uz": "Mobiuz muloqot xizmati"
+            },
+            "desc": {
+              "ru": "",
+              "uz": ""
+            },
+            "code": "*460#",
+            "codeOff": "*460*0#"
+          },
+          {
+            "title": {
+              "ru": "Погода",
+              "uz": "Ob-xavo"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер 345.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 345 qisqa raqamiga 2 sonini SMS qilib yuboring."
             }
           },
           {
             "title": {
-              "ru": "Акция «MEGAбайты + 25%»",
-              "uz": "«MEGAbaytlar +25%» aksiyasi"
+              "ru": "Гороскоп",
+              "uz": "Bashoratlar"
             },
             "desc": {
-              "ru": "При покупки месячных интернет пакетов получите 25% от купленного объема трафика в подарок.Акция «MEGAбайты +25%» действует до 06.09.2020 г.",
-              "uz": "Oylik internet to'plamlar oling va qo'shimcha 25% MBlarga ega bo'ling.«MEGAbaytlar +25%» aksiyasi 06.09.2020gacha amal qiladi."
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер 347.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 347 qisqa raqamiga 2 sonini SMS qilib yuboring."
             }
           },
           {
             "title": {
-              "ru": "Акция «АвтоMOBI»",
-              "uz": "«АвтоMOBI» aksiyasi"
+              "ru": "Анекдоты",
+              "uz": "Latifalar"
             },
             "desc": {
-              "ru": "Подключитесь на тарифный план с абонентской платой 30 000 сум/мес. и больше, и участвуйте в акции «АвтоMOBI»!Также в акции участвуют абоненты – физические лица всех тарифных планов (кроме ТП «Tourist SIM», «Tourist SIM Lite», «Tourist SIM+», «Tourist SIM Lite+»), купившие пакет «2020 MB» или «2020 минут»!",
-              "uz": "Oylik abonent to‘lovi 30 000 so‘m va undan ko‘proq bo‘lgan tarif rejalariga ulaning hamda «АвтоMOBI» aksiyasi ishtirokchisiga aylaning!Shuningdek, aksiyada «2020 MB» yoki «2020 daqiqa» maxsus to‘plamlarini faollashtirgan abonentlar – jismoniy shaxslar («Tourist SIM», «Tourist SIM Lite», «Tourist SIM+», «Tourist SIM Lite+» TR foydalanuvchilaridan tashqari) ham ishtirok etishi mumkin!"
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 2 на кароткий номер 359.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 359 qisqa raqamiga 2 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Курс валют",
+              "uz": "Balyutalar kursi"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 04 на кароткий номер 359.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 359 qisqa raqamiga 04 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Диета и Рецепты",
+              "uz": "Parxezlar"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 05 на кароткий номер 359.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 359 qisqa raqamiga 05 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Советы мудрых",
+              "uz": "Donishmand maslaxatlari"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 07 на кароткий номер 359.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 359 qisqa raqamiga 07 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Настроение",
+              "uz": "Kayfiyat"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 06 на кароткий номер 359.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 359 qisqa raqamiga 06 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Музыка",
+              "uz": "Musiqa"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 09 на кароткий номер 655.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 655 qisqa raqamiga 09 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Игры",
+              "uz": "O'yinlar"
+            },
+            "desc": {
+              "ru": "Цена: 650 сум один SMS.Отключение: отправьте СМС с цыфрой 010 на кароткий номер 655.",
+              "uz": "Xar SMS narxi: 650 so'm.Xizmatni o'chirish uchun 655 qisqa raqamiga 010 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Видео",
+              "uz": "Video"
+            },
+            "desc": {
+              "ru": "Цена: 3150 сум один SMS.Отключение: отправьте СМС с цыфрой 011 на кароткий номер 655.",
+              "uz": "Xar SMS narxi: 3150 so'm.Xizmatni o'chirish uchun 655 qisqa raqamiga 011 sonini SMS qilib yuboring."
+            }
+          },
+          {
+            "title": {
+              "ru": "Фото",
+              "uz": "Suratlar"
+            },
+            "desc": {
+              "ru": "Цена: 3150 сум один SMS.Недельная услуга.",
+              "uz": "Xar SMS narxi: 3150 so'm.Xizmat bir martallik."
             }
           }
         ]

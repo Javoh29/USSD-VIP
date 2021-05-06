@@ -41,7 +41,7 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: _item('assets/images/ic_phone_${selectU.toString()}.png', 'Связаться с нами'),
         ),
-        _item('assets/images/ic_user_${selectU.toString()}.png', 'Мои номер'),
+        _item('assets/images/ic_user_${selectU.toString()}.png', 'Мой номер'),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: _item('assets/images/ic_language_${selectU.toString()}.png', 'Язык'),

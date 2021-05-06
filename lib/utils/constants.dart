@@ -1,9 +1,21 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
+import 'package:intl/intl.dart';
 
 int selectU = 0;
 
 Color textGrey = Color(0xffa0a0a0);
+Color textGreyDark = Color(0xff828282);
+
+var numFormat = NumberFormat('###,###', 'ru_RU');
+
+List<String> fileNames = [
+  'uzmobile.json',
+  'ucell.json',
+  'mobiuz.json',
+  'beeline.json'
+];
 
 List<Color> mainColors = [
   Color(0xff1989d7),
@@ -47,4 +59,9 @@ Color getColorIndicatorOne() {
 
 Color getColorIndicatorTwo() {
   return Color(0x501387d8);
+}
+
+changeStatusBar(Color color, bool isDark) async {
+  await FlutterStatusbarcolor.setStatusBarColor(color, animate: true);
+  await FlutterStatusbarcolor.setStatusBarWhiteForeground(isDark);
 }

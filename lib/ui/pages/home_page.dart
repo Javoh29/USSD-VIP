@@ -1,13 +1,12 @@
-import 'dart:convert';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_indicator/page_view_indicator.dart';
-import 'package:ussd_vip/data/model/ussd_model.dart';
 import 'package:ussd_vip/data/providers/navigation_provider.dart';
 import 'package:ussd_vip/utils/constants.dart';
 import 'package:provider/provider.dart';
+import 'package:ussd_vip/utils/routes.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -35,18 +34,6 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    loadData();
-  }
-
-  Future<void> loadData() async {
-    String data = await DefaultAssetBundle.of(context).loadString("assets/data/mobiuz.json");
-    var j = jsonDecode(data);
-    UssdModel model = UssdModel.fromJson(j['ussd']['sections'][0]);
-    print(model.items[0].title.toJson());
-    // Directory directory = await getApplicationDocumentsDirectory();
-    // var f = File("${directory.path}/assets/data/mobi.json");
-    // String text = await f.readAsString();
-    // print("JSON: $text");
   }
 
   @override
@@ -54,6 +41,7 @@ class _HomePageState extends State<HomePage> {
     pageIndexNotifier.dispose();
     super.dispose();
   }
+
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +90,7 @@ class _HomePageState extends State<HomePage> {
             enlargeCenterPage: false,
             scrollDirection: Axis.horizontal,
             onPageChanged: (index, reason) {
-              context.read<NavigationProvider>().notifyListeners();
+              context.read<NavigationProvider>().updateState();
               setState(() {
                 selectU = index;
               });
@@ -141,8 +129,12 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _itemButton('assets/images/ic_internet.png', 'Интернет'),
-                    _itemButton('assets/images/ic_clock.png', 'Минуты'),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.internetPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_internet.png', 'Интернет')),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.minutesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_clock.png', 'Минуты')),
                   ],
                 ),
               ),
@@ -151,8 +143,12 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _itemButton('assets/images/ic_sms.png', 'SMS'),
-                    _itemButton('assets/images/ic_sim.png', 'Тарифы'),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.smsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_sms.png', 'SMS')),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.tariffsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_sim.png', 'Тарифы')),
                   ],
                 ),
               ),
@@ -161,8 +157,12 @@ class _HomePageState extends State<HomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _itemButton('assets/images/ic_ussd.png', 'USSD коды'),
-                    _itemButton('assets/images/ic_diamond.png', 'Сервис'),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.ussdPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_ussd.png', 'USSD коды')),
+                    GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, Routes.servicesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                        child: _itemButton('assets/images/ic_diamond.png', 'Сервис')),
                   ],
                 ),
               ),
