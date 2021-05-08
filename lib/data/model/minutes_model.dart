@@ -46,18 +46,18 @@ class MinutesModel {
 class Items {
   Title _title;
   String _code;
-  int _period;
+  var _period;
   int _price;
 
   Title get title => _title;
   String get code => _code;
-  int get period => _period;
+  get period => _period;
   int get price => _price;
 
   Items({
       Title title, 
       String code, 
-      int period, 
+      var period,
       int price}){
     _title = title;
     _code = code;

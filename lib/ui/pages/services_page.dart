@@ -1,9 +1,11 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:ussd_vip/data/model/services_model.dart';
 import 'package:ussd_vip/ui/widgets/dot_indicator.dart';
+import 'package:ussd_vip/ui/widgets/ask_dialog.dart';
+import 'package:ussd_vip/utils/call_ussd_code.dart';
 import 'package:ussd_vip/utils/constants.dart';
+import 'package:ussd_vip/data/providers/ussd_provider.dart';
+import 'package:provider/provider.dart';
 
 class ServicesPage extends StatefulWidget {
   const ServicesPage({Key key}) : super(key: key);
@@ -18,18 +20,8 @@ class _ServicesPageState extends State<ServicesPage> {
   @override
   void initState() {
     changeStatusBar(mainColors[selectU], true);
-    loadData();
+    _listModel = context.read<UssdProvider>().listServices;
     super.initState();
-  }
-
-  Future<void> loadData() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/data/${fileNames[selectU]}");
-    var j = jsonDecode(data);
-    _listModel = [
-      for (final item in j['services']['sections']) ServicesModel.fromJson(item)
-    ];
-    setState(() {});
   }
 
   @override
@@ -185,28 +177,34 @@ class _ServicesPageState extends State<ServicesPage> {
             children: [
               if (model.codeOff != null)
                 Expanded(
-                child: Container(
-                  height: 40,
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.fromLTRB(10, 20, 10, 5),
-                  decoration: BoxDecoration(
-                    color: Color(0xffF2F2F2),
-                    borderRadius: BorderRadius.circular(10),
+                child: GestureDetector(
+                  onTap: () => CallUssdCode.setUssdCode(model.codeOff),
+                  child: Container(
+                    height: 40,
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.fromLTRB(10, 20, 10, 5),
+                    decoration: BoxDecoration(
+                      color: Color(0xffF2F2F2),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text('Отключить', style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w500),),
                   ),
-                  child: Text('Отключить', style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w500),),
                 ),
               ),
               if (model.code != null)
                 Expanded(
-                child: Container(
-                  height: 40,
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
-                  decoration: BoxDecoration(
-                    color: mainColors[selectU],
-                    borderRadius: BorderRadius.circular(10),
+                child: GestureDetector(
+                  onTap: () => showAskDialog(context, model.code),
+                  child: Container(
+                    height: 40,
+                    alignment: Alignment.center,
+                    margin: EdgeInsets.fromLTRB(10, 30, 10, 5),
+                    decoration: BoxDecoration(
+                      color: mainColors[selectU],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Text('Подключить', style: kTextStyle(fontWeight: FontWeight.w500),),
                   ),
-                  child: Text('Подключить', style: kTextStyle(fontWeight: FontWeight.w500),),
                 ),
               )
             ],

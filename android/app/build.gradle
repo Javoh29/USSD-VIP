@@ -39,7 +39,19 @@ android {
         targetSdkVersion 30
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
     }
+
+//    signingConfigs {
+//        release {
+//            storeFile file('C:\\My files\\projects\\ussd_vip\\android\\ussd_vip_key.jks')
+//            storePassword '291997javoh'
+//            keyAlias 'key0'
+//            keyPassword '291997javoh'
+//        }
+//    }
 
     buildTypes {
         release {

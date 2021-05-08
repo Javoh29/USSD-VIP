@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ussd_vip/utils/constants.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -46,7 +47,9 @@ class SettingsPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 20),
           child: _item('assets/images/ic_language_${selectU.toString()}.png', 'Язык'),
         ),
-        _item('assets/images/ic_market_${selectU.toString()}.png', 'Другие наши продукты'),
+        GestureDetector(
+          onTap: () => launch('https://play.google.com/store/apps/developer?id=UMS+Co-Worker+%28Dealer%29'),
+            child: _item('assets/images/ic_market_${selectU.toString()}.png', 'Другие наши продукты')),
       ],
     );
   }

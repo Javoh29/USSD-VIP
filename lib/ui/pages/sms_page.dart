@@ -1,9 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:ussd_vip/data/model/sms_model.dart';
 import 'package:ussd_vip/ui/widgets/dot_indicator.dart';
+import 'package:ussd_vip/ui/widgets/ask_dialog.dart';
 import 'package:ussd_vip/utils/constants.dart';
+import 'package:ussd_vip/data/providers/ussd_provider.dart';
+import 'package:provider/provider.dart';
 
 class SmsPage extends StatefulWidget {
   const SmsPage({Key key}) : super(key: key);
@@ -19,16 +20,8 @@ class _SmsPageState extends State<SmsPage> {
   @override
   void initState() {
     changeStatusBar(mainColors[selectU], true);
-    loadData();
+    _listModel = context.read<UssdProvider>().listSms;
     super.initState();
-  }
-
-  Future<void> loadData() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/data/${fileNames[selectU]}");
-    var j = jsonDecode(data);
-    _listModel = [for (final item in j['sms']['sections']) SmsModel.fromJson(item)];
-    setState(() {});
   }
 
   @override
@@ -73,110 +66,117 @@ class _SmsPageState extends State<SmsPage> {
 
 
   Widget _items(Items model) {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        Container(
-          width: double.infinity,
-          padding: EdgeInsets.fromLTRB(15, 30, 15, 10),
-          margin: EdgeInsets.fromLTRB(20, 20, 20, 15),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                    color: Color(0x30BFBFBF),
-                    blurRadius: 20,
-                    offset: Offset(0, 5)
-                )
-              ]
-          ),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Image.asset('assets/images/ic_price.png', height: 15, width: 15,),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text('Стоимость:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
-                    ),
-                  ),
-                  Text('${numFormat.format(model.price)} uzs', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Row(
-                  children: [
-                    Image.asset('assets/images/ic_sms2.png', height: 15, width: 15,),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Количество sms:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
-                      ),
-                    ),
-                    Text(model.title.ru, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
-                  ],
-                ),
-              ),
-              Row(
-                children: [
-                  Image.asset('assets/images/ic_calendar.png', height: 15, width: 15,),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text('Срок:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
-                    ),
-                  ),
-                  Text('${model.period} дней', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 6, bottom: 3),
-                child: Row(
-                  children: [
-                    Image.asset('assets/images/ic_code.png', height: 15, width: 15,),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Код:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
-                      ),
-                    ),
-                    Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-                        decoration: BoxDecoration(
-                            color: Color(0xffF2F2F2),
-                            borderRadius: BorderRadius.circular(3)
-                        ),
-                        child: SelectableText(model.code, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),))
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        Positioned(
-          top: 0,
-          child: Container(
-            height: 35,
-            padding: EdgeInsets.symmetric(horizontal: 15),
+    return GestureDetector(
+      onTap: () {
+        if (model.code != null && model.code.isNotEmpty) {
+          showAskDialog(context, model.code);
+        }
+      },
+      child: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Container(
+            width: double.infinity,
+            padding: EdgeInsets.fromLTRB(15, 30, 15, 10),
+            margin: EdgeInsets.fromLTRB(20, 20, 20, 15),
             decoration: BoxDecoration(
-                color: mainColors[selectU],
-                borderRadius: BorderRadius.circular(18),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black12,
+                      color: Color(0x30BFBFBF),
                       blurRadius: 20,
-                      offset: Offset(0, 7)
+                      offset: Offset(0, 5)
                   )
                 ]
             ),
-            alignment: Alignment.center,
-            child: Text(model.title.ru, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Image.asset('assets/images/ic_price.png', height: 15, width: 15,),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Text('Стоимость:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                      ),
+                    ),
+                    Text('${numFormat.format(model.price)} uzs', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Row(
+                    children: [
+                      Image.asset('assets/images/ic_sms2.png', height: 15, width: 15,),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Text('Количество sms:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        ),
+                      ),
+                      Text(model.title.ru, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                    ],
+                  ),
+                ),
+                Row(
+                  children: [
+                    Image.asset('assets/images/ic_calendar.png', height: 15, width: 15,),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        child: Text('Срок:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                      ),
+                    ),
+                    Text('${model.period} дней', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 6, bottom: 3),
+                  child: Row(
+                    children: [
+                      Image.asset('assets/images/ic_code.png', height: 15, width: 15,),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8),
+                          child: Text('Код:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        ),
+                      ),
+                      Container(
+                          padding: EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                          decoration: BoxDecoration(
+                              color: Color(0xffF2F2F2),
+                              borderRadius: BorderRadius.circular(3)
+                          ),
+                          child: SelectableText(model.code, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),))
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
-        )
-      ],
+          Positioned(
+            top: 0,
+            child: Container(
+              height: 35,
+              padding: EdgeInsets.symmetric(horizontal: 15),
+              decoration: BoxDecoration(
+                  color: mainColors[selectU],
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 20,
+                        offset: Offset(0, 7)
+                    )
+                  ]
+              ),
+              alignment: Alignment.center,
+              child: Text(model.title.ru, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

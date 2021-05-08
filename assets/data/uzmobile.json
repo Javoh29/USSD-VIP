@@ -1449,5 +1449,31 @@
         ]
       }
     ]
-  }
+  },
+  "images": [
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_1.png?raw=true",
+      "link": "https://uztelecom.uz/uz/yangiliklar/aksiyalar/ikki-karra-internet-aksiyasi-internet-ko-p-bo-ladi"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_2.png?raw=true",
+      "link": "https://uztelecom.uz/uz/yangiliklar/aksiyalar/uztelecom-dan-bahorgi-chegirmalar-aksiyasi"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_3.png?raw=true",
+      "link": "https://uztelecom.uz/uz/jismoniy-shaxslarga/mobil-aloqa/gsm-2/tariflar/units-2-3"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_4.png?raw=true",
+      "link": "https://uztelecom.uz/uz/yangiliklar/yangiliklar/abonent-qurilmalarini-taqdim-etish-aksiyasi-2021-yilgacha-uzaytiriladi"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_5.png?raw=true",
+      "link": "https://uztelecom.uz/uz/yangiliklar/aksiyalar/myuztelecom-mobil-ilovasi-2021-yilda-ham-bonuslar-sovg-a-qilishda-davom-etadi"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_zero_6.png?raw=true",
+      "link": "https://uzcloud.uz/"
+    }
+  ]
 }

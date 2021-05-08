@@ -1,9 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:ussd_vip/data/providers/navigation_provider.dart';
+import 'package:ussd_vip/data/providers/ussd_provider.dart';
 import 'package:ussd_vip/ui/pages/home_page.dart';
 import 'package:ussd_vip/ui/pages/settings_page.dart';
+import 'package:ussd_vip/utils/call_ussd_code.dart';
 import 'package:ussd_vip/utils/constants.dart';
 
 class MainPage extends StatefulWidget {
@@ -26,6 +28,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   void initState() {
+    context.read<UssdProvider>().getVersion();
     changeStatusBar(Color(0xfff9f9f9), false);
     super.initState();
   }
@@ -36,10 +39,9 @@ class _MainPageState extends State<MainPage> {
       builder: (context, model, child) {
         return Scaffold(
           body: SafeArea(
-            child: Stack(
+            child: Column(
               children: [
-                Padding(
-                    padding: EdgeInsets.only(bottom: 50),
+                Expanded(
                   child: _getPage(model.currentName),
                 ),
                 Align(
@@ -58,80 +60,92 @@ class _MainPageState extends State<MainPage> {
                         )
                       ]
                     ),
-                    child: Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          InkWell(
-                            onTap: () {
-                              model.setPageName(PageName.home);
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 5),
-                                    child: Image.asset('assets/images/ic_home${model.currentName == PageName.home ? '_${selectU.toString()}': ''}.png', height: 20, width: 20,),
-                                  ),
-                                  Text('Home', style: kTextStyle(size: 8, color: model.currentName == PageName.home ? mainColors[selectU] : textGrey))
-                                ],
-                              ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            model.setPageName(PageName.home);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Image.asset('assets/images/ic_home${model.currentName == PageName.home ? '_${selectU.toString()}': ''}.png', height: 23, width: 23,),
+                                ),
+                                Text('Home', style: kTextStyle(size: 10, color: model.currentName == PageName.home ? mainColors[selectU] : textGrey))
+                              ],
                             ),
                           ),
-                          InkWell(
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 5),
-                                    child: Image.asset('assets/images/ic_balance.png', height: 20, width: 20,),
-                                  ),
-                                  Text('Balance', style: kTextStyle(size: 8, color: textGrey),)
-                                ],
-                              ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            switch (selectU) {
+                              case 0: CallUssdCode.setUssdCode('*107#'); break;
+                              case 1: CallUssdCode.setUssdCode('*100#'); break;
+                              case 2: CallUssdCode.setUssdCode('*100#'); break;
+                              case 3: CallUssdCode.setUssdCode('*102#'); break;
+                            }
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Image.asset('assets/images/ic_balance.png', height: 23, width: 23,),
+                                ),
+                                Text('Balance', style: kTextStyle(size: 10, color: textGrey),)
+                              ],
                             ),
                           ),
-                          InkWell(
-                            onTap: () {},
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 5),
-                                    child: Image.asset('assets/images/ic_profile.png', height: 20, width: 20,),
-                                  ),
-                                  Text('Profile', style: kTextStyle(size: 8, color: textGrey))
-                                ],
-                              ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            switch (selectU) {
+                              case 0: launch('https://cabinet.uztelecom.uz/ps/scc/login.php'); break;
+                              case 1: launch('https://my.ucell.uz/Account/Login?ReturnUrl=%2f'); break;
+                              case 2: launch('https://ip.mobi.uz/selfcare/'); break;
+                              case 3: launch('https://beeline.uz/uz'); break;
+                            }
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Image.asset('assets/images/ic_profile.png', height: 23, width: 23,),
+                                ),
+                                Text('Profile', style: kTextStyle(size: 10, color: textGrey))
+                              ],
                             ),
                           ),
-                          InkWell(
-                            onTap: () {
-                              model.setPageName(PageName.settings);
-                            },
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 5),
-                                    child: Image.asset('assets/images/ic_setting${model.currentName == PageName.settings ? '_${selectU.toString()}': ''}.png', height: 20, width: 20,),
-                                  ),
-                                  Text('Settings', style: kTextStyle(size: 8, color: model.currentName == PageName.settings ? mainColors[selectU] : textGrey))
-                                ],
-                              ),
+                        ),
+                        InkWell(
+                          onTap: () {
+                            model.setPageName(PageName.settings);
+                          },
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 5),
+                                  child: Image.asset('assets/images/ic_setting${model.currentName == PageName.settings ? '_${selectU.toString()}': ''}.png', height: 23, width: 23,),
+                                ),
+                                Text('Settings', style: kTextStyle(size: 10, color: model.currentName == PageName.settings ? mainColors[selectU] : textGrey))
+                              ],
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )

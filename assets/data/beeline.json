@@ -946,5 +946,23 @@
         ]
       }
     ]
-  }
+  },
+  "images": [
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_tree_1.png?raw=true",
+      "link": "https://beeline.uz/uz/4g-packages"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_tree_2.png?raw=true",
+      "link": "https://beeline.uz/uz/products/services/beeline-app-service.html"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_tree_3.png?raw=true",
+      "link": "https://beeline.uz/uz/beeline-club-2-0"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_tree_4.png?raw=true",
+      "link": "https://beeline.uz/uz/products/internet-paketi"
+    }
+  ]
 }

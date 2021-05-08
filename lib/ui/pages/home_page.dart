@@ -1,9 +1,13 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_view_indicator/page_view_indicator.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:ussd_vip/data/model/banner_model.dart';
 import 'package:ussd_vip/data/providers/navigation_provider.dart';
+import 'package:ussd_vip/data/providers/ussd_provider.dart';
 import 'package:ussd_vip/utils/constants.dart';
 import 'package:provider/provider.dart';
 import 'package:ussd_vip/utils/routes.dart';
@@ -14,13 +18,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List<String> _imgList = [
-    'assets/images/img_banner2.jpg',
-    'assets/images/img_banner1.jpg',
-    'assets/images/img_banner2.jpg',
-    'assets/images/img_banner1.jpg',
-  ];
-
   List<String> _imgLogoList = [
     'assets/images/logo_uzmobile',
     'assets/images/logo_ucell',
@@ -33,6 +30,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    context.read<UssdProvider>().loadData(context: context);
     super.initState();
   }
 
@@ -45,131 +43,137 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: false,
-      physics: BouncingScrollPhysics(),
-      padding: EdgeInsets.only(top: 10),
-      children: [
-        CarouselSlider(
-          options: CarouselOptions(
-            height: 115,
-            viewportFraction: 1,
-            autoPlay: true,
-            autoPlayInterval: Duration(seconds: 5),
-            autoPlayAnimationDuration: Duration(milliseconds: 600),
-            autoPlayCurve: Curves.fastOutSlowIn,
-            enlargeCenterPage: true,
-            scrollDirection: Axis.horizontal,
-            onPageChanged: (index, _) {
-              pageIndexNotifier.value = index;
-            },
-          ),
-          items: _imgList.map((e) => _itemBanner(e)).toList(),
-        ),
-        PageViewIndicator(
-          pageIndexNotifier: pageIndexNotifier,
-          length: _imgList.length,
-          normalBuilder: (_, index) => Circle(
-            size: 7,
-            color: mainColors[selectU],
-          ),
-          highlightedBuilder: (animation, index) => ScaleTransition(
-            scale: CurvedAnimation(parent: animation, curve: Curves.ease),
-            child: Circle(
-              size: 12,
-              color: indicatorColors[selectU],
+    return Consumer<UssdProvider>(
+      builder: (context, model, child) {
+        return ListView(
+          shrinkWrap: true,
+          physics: BouncingScrollPhysics(),
+          padding: EdgeInsets.only(top: 10),
+          children: [
+            if (model.listBanner != null && model.listBanner.isNotEmpty)
+              CarouselSlider(
+              options: CarouselOptions(
+                height: 115,
+                viewportFraction: 1,
+                autoPlay: true,
+                autoPlayInterval: Duration(seconds: 5),
+                autoPlayAnimationDuration: Duration(milliseconds: 600),
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enlargeCenterPage: true,
+                scrollDirection: Axis.horizontal,
+                onPageChanged: (index, _) {
+                  pageIndexNotifier.value = index;
+                },
+              ),
+              items: model.listBanner.map((e) => _itemBanner(e)).toList(),
             ),
-          ),
-        ),
-        CarouselSlider.builder(
-          itemCount: _imgLogoList.length,
-          options: CarouselOptions(
-            height: 80,
-            viewportFraction: 0.42,
-            initialPage: selectU,
-            enlargeCenterPage: false,
-            scrollDirection: Axis.horizontal,
-            onPageChanged: (index, reason) {
-              context.read<NavigationProvider>().updateState();
-              setState(() {
-                selectU = index;
-              });
-            },
-          ),
-          carouselController: _carouselController,
-          itemBuilder: (context, index, realIdx) =>
-              _itemLogo(_imgLogoList[index], index, realIdx),
-        ),
-        Align(
-          alignment: Alignment.topCenter,
-          child: Container(
-            height: 6,
-            width: 35,
-            decoration: BoxDecoration(
+            if (model.listBanner != null && model.listBanner.isNotEmpty)
+              PageViewIndicator(
+              pageIndexNotifier: pageIndexNotifier,
+              length: model.listBanner != null ? model.listBanner.length : 0,
+              normalBuilder: (_, index) => Circle(
+                size: 7,
                 color: mainColors[selectU],
-                borderRadius: BorderRadius.circular(3)),
-          ),
-        ),
-        Container(
-          width: double.infinity,
-          margin: EdgeInsets.fromLTRB(15, 20, 15, 25),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                    color: Color(0xffF1F1F1),
-                    offset: Offset(0, 2),
-                    blurRadius: 10)
-              ]),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 30, bottom: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.internetPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_internet.png', 'Интернет')),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.minutesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_clock.png', 'Минуты')),
-                  ],
+              ),
+              highlightedBuilder: (animation, index) => ScaleTransition(
+                scale: CurvedAnimation(parent: animation, curve: Curves.ease),
+                child: Circle(
+                  size: 12,
+                  color: indicatorColors[selectU],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15, bottom: 15),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.smsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_sms.png', 'SMS')),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.tariffsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_sim.png', 'Тарифы')),
-                  ],
-                ),
+            ),
+            CarouselSlider.builder(
+              itemCount: _imgLogoList.length,
+              options: CarouselOptions(
+                height: 80,
+                viewportFraction: 0.40,
+                initialPage: selectU,
+                enlargeCenterPage: false,
+                scrollDirection: Axis.horizontal,
+                onPageChanged: (index, reason) {
+                  selectU = index;
+                  context.read<NavigationProvider>().updateState();
+                  model.loadData(context: context);
+                  setState(() {});
+                },
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 15, bottom: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.ussdPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_ussd.png', 'USSD коды')),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(context, Routes.servicesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                        child: _itemButton('assets/images/ic_diamond.png', 'Сервис')),
-                  ],
-                ),
+              carouselController: _carouselController,
+              itemBuilder: (context, index, realIdx) =>
+                  _itemLogo(_imgLogoList[index], index, realIdx),
+            ),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                height: 6,
+                width: 35,
+                decoration: BoxDecoration(
+                    color: mainColors[selectU],
+                    borderRadius: BorderRadius.circular(3)),
               ),
-            ],
-          ),
-        )
-      ],
+            ),
+            Container(
+              width: double.infinity,
+              margin: EdgeInsets.fromLTRB(15, 20, 15, 25),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                        color: Color(0xffF1F1F1),
+                        offset: Offset(0, 2),
+                        blurRadius: 10)
+                  ]),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 30, bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.internetPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_internet.png', 'Интернет')),
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.minutesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_clock.png', 'Минуты')),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15, bottom: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.smsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_sms.png', 'SMS')),
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.tariffsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_sim.png', 'Тарифы')),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15, bottom: 30),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.ussdPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_ussd.png', 'USSD коды')),
+                        GestureDetector(
+                            onTap: () => Navigator.pushNamed(context, Routes.servicesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
+                            child: _itemButton('assets/images/ic_diamond.png', 'Сервис')),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
+        );
+      },
     );
   }
 
@@ -262,19 +266,35 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Widget _itemBanner(String link) {
-    return Container(
-      margin: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 5),
-      decoration:
-          BoxDecoration(borderRadius: BorderRadius.circular(10), boxShadow: [
-        BoxShadow(color: Colors.black26, blurRadius: 5, offset: Offset(0, 1))
-      ]),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(10),
-        child: Image.asset(
-          link,
-          fit: BoxFit.cover,
-          height: 100,
+  Widget _itemBanner(BannerModel model) {
+    return GestureDetector(
+      onTap: () => launch(model.link),
+      child: Container(
+        margin: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 5),
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.circular(10), boxShadow: [
+          BoxShadow(color: Colors.black12, blurRadius: 6, offset: Offset(0, 1))
+        ]),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: CachedNetworkImage(
+            imageUrl: model.imgUrl,
+            height: 100,
+            width: double.infinity,
+            fit: BoxFit.cover,
+            placeholder: (context, url) => Image.asset(
+              'assets/images/img_def.jpg',
+              height: 100,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+            errorWidget: (context, url, error) => Image.asset(
+              'assets/images/img_def.jpg',
+              height: 100,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            ),
+          )
         ),
       ),
     );

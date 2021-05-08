@@ -1757,5 +1757,27 @@
         ]
       }
     ]
-  }
+  },
+  "images": [
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_one_1.png?raw=true",
+      "link": "https://t.me/makon_brand_bot"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_one_2.png?raw=true",
+      "link": "https://ucell.uz/uz/subscribers/internet/3g/5G_from_Ucell"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_one_3.png?raw=true",
+      "link": "https://ucell.uz/uz/subscribers/internet/inet_services/promotion_Ucell_in_underground"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_one_4.png?raw=true",
+      "link": "https://ucell.uz/uz/subscribers/services2/special_offers2/al_chiroq_campaign"
+    },
+    {
+      "imgUrl": "https://github.com/Javoh29/Mobiuz/blob/master/USSD_VIP/images/img_one_5.png?raw=true",
+      "link": "https://ucell.uz/uz/subscribers/tariffs/tantana_tariff_line"
+    }
+  ]
 }

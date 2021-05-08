@@ -1,9 +1,10 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:ussd_vip/data/model/tariffs_model.dart';
 import 'package:ussd_vip/ui/widgets/dot_indicator.dart';
+import 'package:ussd_vip/ui/widgets/ask_dialog.dart';
 import 'package:ussd_vip/utils/constants.dart';
+import 'package:ussd_vip/data/providers/ussd_provider.dart';
+import 'package:provider/provider.dart';
 
 class TariffsPage extends StatefulWidget {
   const TariffsPage({Key key}) : super(key: key);
@@ -19,16 +20,8 @@ class _TariffsPageState extends State<TariffsPage> {
   @override
   void initState() {
     changeStatusBar(mainColors[selectU], true);
-    loadData();
+    _listModel = context.read<UssdProvider>().listTariffs;
     super.initState();
-  }
-
-  Future<void> loadData() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString("assets/data/${fileNames[selectU]}");
-    var j = jsonDecode(data);
-    _listModel = [for (final item in j['tariffs']['sections']) TariffsModel.fromJson(item)];
-    setState(() {});
   }
 
   @override
@@ -165,16 +158,23 @@ class _TariffsPageState extends State<TariffsPage> {
                       child: SelectableText(model.code, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),))
                 ],
               ),
-              Container(
-                height: 40,
-                width: double.infinity,
-                margin: EdgeInsets.fromLTRB(10, 15, 10, 5),
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: mainColors[selectU],
-                  borderRadius: BorderRadius.circular(10),
+              GestureDetector(
+                onTap: () {
+                  if (model.code != null && model.code.isNotEmpty) {
+                    showAskDialog(context, model.code);
+                  }
+                },
+                child: Container(
+                  height: 40,
+                  width: double.infinity,
+                  margin: EdgeInsets.fromLTRB(10, 15, 10, 5),
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: mainColors[selectU],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Text('Подключиться', style: kTextStyle(size: 16, fontWeight: FontWeight.w500),),
                 ),
-                child: Text('Подключиться', style: kTextStyle(size: 16, fontWeight: FontWeight.w500),),
               )
             ],
           ),

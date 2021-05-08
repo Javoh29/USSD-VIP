@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'data/providers/navigation_provider.dart';
+import 'data/providers/ussd_provider.dart';
 import 'utils/routes.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class UssdApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => NavigationProvider()),
+        ChangeNotifierProvider(create: (_) => UssdProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

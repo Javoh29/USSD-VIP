@@ -11,10 +11,10 @@ Color textGreyDark = Color(0xff828282);
 var numFormat = NumberFormat('###,###', 'ru_RU');
 
 List<String> fileNames = [
-  'uzmobile.json',
-  'ucell.json',
-  'mobiuz.json',
-  'beeline.json'
+  'uzmobile',
+  'ucell',
+  'mobiuz',
+  'beeline'
 ];
 
 List<Color> mainColors = [
@@ -62,6 +62,6 @@ Color getColorIndicatorTwo() {
 }
 
 changeStatusBar(Color color, bool isDark) async {
-  await FlutterStatusbarcolor.setStatusBarColor(color, animate: true);
   await FlutterStatusbarcolor.setStatusBarWhiteForeground(isDark);
+  await FlutterStatusbarcolor.setStatusBarColor(color, animate: false);
 }
