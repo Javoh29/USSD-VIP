@@ -23,7 +23,8 @@ class UssdApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: Color(0xfff9f9f9),
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          fontFamily: 'Montserrat'
+          fontFamily: 'Montserrat',
+          primaryColor: Color(0xffE41F26)
         ),
         onGenerateRoute: Routes.generateRoute
       ),

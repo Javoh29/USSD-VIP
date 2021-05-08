@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_statusbarcolor/flutter_statusbarcolor.dart';
 import 'package:intl/intl.dart';
 
-int selectU = 0;
+int selectU = 2;
 
 Color textGrey = Color(0xffa0a0a0);
 Color textGreyDark = Color(0xff828282);

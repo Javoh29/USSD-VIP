@@ -7,6 +7,7 @@ import 'package:ussd_vip/ui/pages/home_page.dart';
 import 'package:ussd_vip/ui/pages/settings_page.dart';
 import 'package:ussd_vip/utils/call_ussd_code.dart';
 import 'package:ussd_vip/utils/constants.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class MainPage extends StatefulWidget {
   @override
@@ -28,7 +29,8 @@ class _MainPageState extends State<MainPage> {
 
   @override
   void initState() {
-    context.read<UssdProvider>().getVersion();
+    if (!kIsWeb)
+      context.read<UssdProvider>().getVersion();
     changeStatusBar(Color(0xfff9f9f9), false);
     super.initState();
   }
