@@ -37,27 +37,27 @@ android {
         applicationId "com.range.ussd_vip"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode flutterVersionCode.toInteger()
+        versionCode 2
         versionName flutterVersionName
         ndk {
-            abiFilters 'armeabi-v7a'
+            abiFilters 'arm64-v8a'
         }
     }
 
-//    signingConfigs {
-//        release {
-//            storeFile file('C:\\My files\\projects\\ussd_vip\\android\\ussd_vip_key.jks')
-//            storePassword '291997javoh'
-//            keyAlias 'key0'
-//            keyPassword '291997javoh'
-//        }
-//    }
+    signingConfigs {
+        release {
+            storeFile file('C:\\My files\\projects\\ussd_vip\\android\\ussd_vip_key.jks')
+            storePassword '291997javoh'
+            keyAlias 'key0'
+            keyPassword '291997javoh'
+        }
+    }
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
 
             minifyEnabled true
             shrinkResources true

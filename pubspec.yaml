@@ -1,8 +1,8 @@
 name: ussd_vip
 description: A new Flutter application.
 
-publish_to: '1.0.1'
-version: 1.0.1
+publish_to: '1.0.2'
+version: 1.0.2
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

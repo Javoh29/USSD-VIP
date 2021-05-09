@@ -43,7 +43,7 @@ class _ServicesPageState extends State<ServicesPage> {
             labelPadding: EdgeInsets.only(bottom: 5, left: 15, right: 15),
             indicator: DotIndicator(
               distanceFromCenter: 12,
-              radius: 2.5,
+              radius: 4,
               paintingStyle: PaintingStyle.fill,
             ),
             isScrollable: true,
@@ -51,7 +51,7 @@ class _ServicesPageState extends State<ServicesPage> {
                 .map(
                   (e) => Tab(
                     child: Text(
-                      e.title.ru,
+                      lang ? e.title.ru : e.title.uz,
                       style: kTextStyle(fontWeight: FontWeight.w500, size: 13),
                     ),
                   ),
@@ -59,7 +59,7 @@ class _ServicesPageState extends State<ServicesPage> {
                 .toList(),
           ),
           title: Text(
-            'Тарифы',
+            lang ? 'Сервисы' : 'Xizmatlar',
             style: kTextStyle(fontWeight: FontWeight.w600),
           ),
           centerTitle: true,
@@ -94,14 +94,14 @@ class _ServicesPageState extends State<ServicesPage> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            model.title.ru,
+            lang ? model.title.ru : model.title.uz,
             style: kTextStyle(
                 color: Colors.black87, size: 13, fontWeight: FontWeight.w600),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Text(
-              model.desc.ru,
+              lang ? model.desc.ru : model.desc.uz,
               style: kTextStyle(
                   color: textGrey, fontWeight: FontWeight.w500, size: 12),
             ),
@@ -118,7 +118,7 @@ class _ServicesPageState extends State<ServicesPage> {
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Text(
-                    'Код:',
+                    lang ? 'Код:' : 'Code:',
                     style: kTextStyle(
                         color: textGrey, size: 12, fontWeight: FontWeight.w500),
                   ),
@@ -152,7 +152,7 @@ class _ServicesPageState extends State<ServicesPage> {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Text(
-                        'Код отключение:',
+                        lang ? 'Код отключение:' : 'O\'chirish ko\'di:',
                         style: kTextStyle(
                             color: textGrey, size: 12, fontWeight: FontWeight.w500),
                       ),
@@ -187,7 +187,7 @@ class _ServicesPageState extends State<ServicesPage> {
                       color: Color(0xffF2F2F2),
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Отключить', style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w500),),
+                    child: Text(lang ? 'Отключить' :'O\'chirish', style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w500),),
                   ),
                 ),
               ),
@@ -203,7 +203,7 @@ class _ServicesPageState extends State<ServicesPage> {
                       color: mainColors[selectU],
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Подключить', style: kTextStyle(fontWeight: FontWeight.w500),),
+                    child: Text(lang ? 'Подключить' : 'Yoqish', style: kTextStyle(fontWeight: FontWeight.w500),),
                   ),
                 ),
               )

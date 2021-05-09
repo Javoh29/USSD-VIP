@@ -133,10 +133,10 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         GestureDetector(
                             onTap: () => Navigator.pushNamed(context, Routes.internetPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                            child: _itemButton('assets/images/ic_internet.png', 'Интернет')),
+                            child: _itemButton('assets/images/ic_internet.png', lang ? 'Интернет' : 'Internet')),
                         GestureDetector(
                             onTap: () => Navigator.pushNamed(context, Routes.minutesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                            child: _itemButton('assets/images/ic_clock.png', 'Минуты')),
+                            child: _itemButton('assets/images/ic_clock.png', lang ? 'Минуты' : 'Daqiqalar')),
                       ],
                     ),
                   ),
@@ -150,7 +150,7 @@ class _HomePageState extends State<HomePage> {
                             child: _itemButton('assets/images/ic_sms.png', 'SMS')),
                         GestureDetector(
                             onTap: () => Navigator.pushNamed(context, Routes.tariffsPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                            child: _itemButton('assets/images/ic_sim.png', 'Тарифы')),
+                            child: _itemButton('assets/images/ic_sim.png', lang ? 'Тарифы' : 'Tariflar')),
                       ],
                     ),
                   ),
@@ -161,10 +161,10 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         GestureDetector(
                             onTap: () => Navigator.pushNamed(context, Routes.ussdPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                            child: _itemButton('assets/images/ic_ussd.png', 'USSD коды')),
+                            child: _itemButton('assets/images/ic_ussd.png', lang ? 'USSD коды' : 'USSD ko\'dlar')),
                         GestureDetector(
                             onTap: () => Navigator.pushNamed(context, Routes.servicesPage).then((value) => changeStatusBar(Color(0xfff9f9f9), false)),
-                            child: _itemButton('assets/images/ic_diamond.png', 'Сервис')),
+                            child: _itemButton('assets/images/ic_diamond.png', lang ? 'Сервисы' : 'Xizmatlar')),
                       ],
                     ),
                   ),

@@ -30,13 +30,13 @@ Future<T> showAskDialog<T>(BuildContext context, String code) {
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           child: Image.asset('assets/images/ic_question.png', height: 20, width: 20,),
                         ),
-                        Text('Вы уверены?', style: kTextStyle(fontWeight: FontWeight.w500),)
+                        Text(lang ? 'Вы уверены?' : 'Ishonchingiz komilmi?', style: kTextStyle(fontWeight: FontWeight.w500),)
                       ],
                     ),
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                    child: Text('Вы действителбно хотите подключить данную услугу?', style: kTextStyle(color: Colors.black87, size: 15, fontWeight: FontWeight.w600), textAlign: TextAlign.center,),
+                    child: Text(lang ? 'Вы действителбно хотите подключить данную услугу?' : 'Siz haqiqatan ham ushbu xizmatni yoqmoqchimisiz?', style: kTextStyle(color: Colors.black87, size: 15, fontWeight: FontWeight.w600), textAlign: TextAlign.center,),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -47,7 +47,7 @@ Future<T> showAskDialog<T>(BuildContext context, String code) {
                         ),
                         elevation: 0,
                         color: mainColors[selectU],
-                          onPressed: () => Navigator.pop(context), child: Text('Отмена', style: kTextStyle(fontWeight: FontWeight.w500),)),
+                          onPressed: () => Navigator.pop(context), child: Text(lang ? 'Отмена' : 'Ortga', style: kTextStyle(fontWeight: FontWeight.w500),)),
                       RaisedButton(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8),
@@ -57,7 +57,7 @@ Future<T> showAskDialog<T>(BuildContext context, String code) {
                           onPressed: () {
                             CallUssdCode.setUssdCode(code);
                             Navigator.pop(context);
-                          }, child: Text('Да', style: kTextStyle(fontWeight: FontWeight.w500),))
+                          }, child: Text(lang ? 'Да' : 'Xa', style: kTextStyle(fontWeight: FontWeight.w500),))
                     ],
                   )
                 ],

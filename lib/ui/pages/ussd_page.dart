@@ -35,7 +35,7 @@ class _UssdPageState extends State<UssdPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          'USSD коды',
+          lang ? 'USSD коды' : 'USSD ko\'lar',
           style: kTextStyle(fontWeight: FontWeight.w600),
         ),
         centerTitle: true,
@@ -85,9 +85,9 @@ class _UssdPageState extends State<UssdPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(model.title.ru, style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w600, size: 14),),
+                  Text(lang ? model.title.ru : model.title.uz, style: kTextStyle(color: textGreyDark, fontWeight: FontWeight.w600, size: 14),),
                   SizedBox(height: 10,),
-                  Text(model.desc.ru, style: kTextStyle(color: textGrey, fontWeight: FontWeight.w500, size: 13),),
+                  Text(lang ? model.desc.ru : model.desc.uz, style: kTextStyle(color: textGrey, fontWeight: FontWeight.w500, size: 13),),
                 ],
               ),
             )

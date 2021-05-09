@@ -42,13 +42,13 @@ class _TariffsPageState extends State<TariffsPage> {
             labelPadding: EdgeInsets.only(bottom: 5, left: 15, right: 15),
             indicator: DotIndicator(
               distanceFromCenter: 12,
-              radius: 2.5,
+              radius: 4,
               paintingStyle: PaintingStyle.fill,
             ),
             isScrollable: true,
-            tabs: _listModel.map((e) => Tab(child: Text(e.title.ru, style: kTextStyle(fontWeight: FontWeight.w500, size: 13),),),).toList(),
+            tabs: _listModel.map((e) => Tab(child: Text(lang ? e.title.ru : e.title.uz, style: kTextStyle(fontWeight: FontWeight.w500, size: 13),),),).toList(),
           ),
-          title: Text('Тарифы', style: kTextStyle(fontWeight: FontWeight.w600),),
+          title: Text(lang ? 'Тарифы' : 'Tariflar', style: kTextStyle(fontWeight: FontWeight.w600),),
           centerTitle: true,
         ),
         body: TabBarView(
@@ -92,7 +92,7 @@ class _TariffsPageState extends State<TariffsPage> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text('Стоимость:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                      child: Text(lang ? 'Стоимость:' : 'Narxi:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                     ),
                   ),
                   Text('${numFormat.format(model.price)} uzs', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
@@ -106,10 +106,10 @@ class _TariffsPageState extends State<TariffsPage> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Количество sms:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        child: Text(lang ? 'Количество sms:' : 'Sms hajmi:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                       ),
                     ),
-                    Text('${model.sms} шт', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                    Text('${model.sms} ${lang ? 'шт' : 'dona'}', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
                   ],
                 ),
               ),
@@ -119,10 +119,10 @@ class _TariffsPageState extends State<TariffsPage> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text('Срок:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                      child: Text(lang ? 'Срок:' : 'Muddati:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                     ),
                   ),
-                  Text('${model.minAll} мин', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                  Text('${model.minAll} ${lang ? 'мин' : 'min'}', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
                 ],
               ),
               Padding(
@@ -133,7 +133,7 @@ class _TariffsPageState extends State<TariffsPage> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Интренет:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        child: Text(lang ? 'Интренет:' : 'Internet:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                       ),
                     ),
                     Text('${model.net} MB', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
@@ -146,7 +146,7 @@ class _TariffsPageState extends State<TariffsPage> {
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8),
-                      child: Text('Код:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                      child: Text(lang ? 'Код:' : 'Code:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                     ),
                   ),
                   Container(
@@ -173,7 +173,7 @@ class _TariffsPageState extends State<TariffsPage> {
                     color: mainColors[selectU],
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Text('Подключиться', style: kTextStyle(size: 16, fontWeight: FontWeight.w500),),
+                  child: Text(lang ? 'Подключиться' : 'Ulanish', style: kTextStyle(size: 16, fontWeight: FontWeight.w500),),
                 ),
               )
             ],
@@ -196,7 +196,7 @@ class _TariffsPageState extends State<TariffsPage> {
                 ]
             ),
             alignment: Alignment.center,
-            child: Text(model.title.ru, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
+            child: Text(lang ? model.title.ru : model.title.uz, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
           ),
         )
       ],

@@ -10,6 +10,8 @@ Color textGreyDark = Color(0xff828282);
 
 var numFormat = NumberFormat('###,###', 'ru_RU');
 
+bool lang = true;
+
 List<String> fileNames = [
   'uzmobile',
   'ucell',

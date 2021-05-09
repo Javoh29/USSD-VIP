@@ -43,13 +43,13 @@ class _InternetPageState extends State<InternetPage> {
             labelPadding: EdgeInsets.only(bottom: 5, left: 15, right: 15),
             indicator: DotIndicator(
               distanceFromCenter: 12,
-              radius: 2.5,
+              radius: 4,
               paintingStyle: PaintingStyle.fill,
             ),
             isScrollable: true,
-            tabs: _listModel.map((e) => Tab(child: Text(e.title.ru, style: kTextStyle(fontWeight: FontWeight.w500, size: 13),),),).toList(),
+            tabs: _listModel.map((e) => Tab(child: Text(lang ? e.title.ru : e.title.uz, style: kTextStyle(fontWeight: FontWeight.w500, size: 13),),),).toList(),
           ),
-          title: Text('Интернет пакеты', style: kTextStyle(fontWeight: FontWeight.w600),),
+          title: Text(lang ? 'Интернет пакеты' : 'Internet-to\'plamlar', style: kTextStyle(fontWeight: FontWeight.w600),),
           centerTitle: true,
         ),
         body: TabBarView(
@@ -99,7 +99,7 @@ class _InternetPageState extends State<InternetPage> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Стоимость:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        child: Text(lang ? 'Стоимость:' : 'Narxi:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                       ),
                     ),
                     Text('${numFormat.format(model.price)} uzs', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
@@ -113,10 +113,10 @@ class _InternetPageState extends State<InternetPage> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text('Количество мб:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                          child: Text(lang ? 'Количество мб:' : 'MB hajmi:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                         ),
                       ),
-                      Text(model.title.ru, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                      Text(lang ? model.title.ru : model.title.uz, style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
                     ],
                   ),
                 ),
@@ -126,10 +126,10 @@ class _InternetPageState extends State<InternetPage> {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8),
-                        child: Text('Срок:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                        child: Text(lang ? 'Срок:' : 'Muddati:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                       ),
                     ),
-                    Text('${model.period} дней', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
+                    Text('${model.period} ${lang ? 'дней' : 'kun'}', style: kTextStyle(color: mainColors[selectU], size: 12, fontWeight: FontWeight.w500),)
                   ],
                 ),
                 Padding(
@@ -140,7 +140,7 @@ class _InternetPageState extends State<InternetPage> {
                       Expanded(
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8),
-                          child: Text('Код:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
+                          child: Text(lang ? 'Код:' : 'Code:', style: kTextStyle(color: textGreyDark, size: 12, fontWeight: FontWeight.w500),),
                         ),
                       ),
                       Container(
@@ -173,7 +173,7 @@ class _InternetPageState extends State<InternetPage> {
                 ]
               ),
               alignment: Alignment.center,
-              child: Text(model.title.ru, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
+              child: Text(lang ? model.title.ru : model.title.uz, style: kTextStyle(size: 18, fontWeight: FontWeight.w500),),
             ),
           )
         ],
