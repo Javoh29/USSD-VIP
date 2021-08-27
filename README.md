@@ -2,6 +2,8 @@
 
 [![Frame-12.jpg](https://i.postimg.cc/D0dm4yFW/Frame-12.jpg)](https://postimg.cc/bSrqKPZ8)
 
+<a href='https://play.google.com/store/apps/details?id=com.range.ussd_vip&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+
 A new Flutter application.
 
 ## Getting Started
